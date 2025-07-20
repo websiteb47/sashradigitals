@@ -1,0 +1,121 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
+
+const API_URL = 'https://sahasra-backend.onrender.com' || 'http://localhost:5000';
+
+const Contact = () => {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+
+  const validateForm = () => {
+    const { name, email, message } = formData;
+    if (!name.trim()) return 'Name is required';
+    if (!email.trim()) return 'Email is required';
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) return 'Enter a valid email address';
+    if (!message.trim()) return 'Message is required';
+    if (message.length < 10) return 'Message should be at least 10 characters';
+    return null;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const error = validateForm();
+    if (error) {
+      toast.error(error);
+      return;
+    }
+    try {
+      toast.loading('Sending message...');
+      await axios.post(`${API_URL}/api/contact`, formData);
+      toast.dismiss();
+      toast.success('Message sent successfully!');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      toast.dismiss();
+      toast.error('Failed to send message. Please try again.');
+    }
+  };
+
+  return (
+    <section className="bg-slate-100 w-full min-h-screen px-0 py-16">
+      <Toaster position="top-center" reverseOrder={false} />
+      <div className="max-w-5xl mx-auto px-4 md:px-20">
+        <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-6">Contact Us</h2>
+        <p className="text-lg text-gray-700 mb-8">
+          We'd love to hear from you! Whether you have questions about our services, need a custom quote, or just want to say hello — feel free to reach out.
+        </p>
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg space-y-4 border border-orange-100">
+            <div>
+              <label className="block mb-1 text-orange-400 font-semibold">Your Name</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                className="w-full px-4 py-2 rounded bg-slate-100 text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
+              />
+            </div>
+            <div>
+              <label className="block mb-1 text-orange-400 font-semibold">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className="w-full px-4 py-2 rounded bg-slate-100 text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
+              />
+            </div>
+            <div>
+              <label className="block mb-1 text-orange-400 font-semibold">Message</label>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="How can we help you?"
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                className="w-full px-4 py-2 rounded bg-slate-100 text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded font-semibold transition"
+            >
+              Send Message
+            </button>
+          </form>
+
+          {/* Contact Info */}
+          <div className="space-y-6 text-black">
+            <div>
+              <h3 className="text-xl font-semibold text-orange-400 mb-1">Email</h3>
+              <a href="mailto:sahasradigitals919@gmail.com" className="text-gray-700 hover:text-orange-500 transition">sahasradigitals919@gmail.com</a>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-orange-400 mb-1">Phone</h3>
+              <a href="tel:+917893940717" className="text-gray-700 hover:text-orange-500 transition">+91 78939 40717</a>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-orange-400 mb-1">Address</h3>
+              <p className="text-gray-700">
+                31-1-1425, Sali Pet, Arundelpet,<br />
+                Guntur, Andhra Pradesh - 522601.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-orange-400 mb-1">Business Hours</h3>
+              <p className="text-gray-700">Monday - Saturday: 9 AM to 6 PM</p>
+              <p className="text-gray-700">Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
