@@ -6,6 +6,7 @@ import Services from './components/Services'
 import Contact from './components/Contact'
 import Gallery from './components/Gallery'
 // import Leads from './components/Leads'
+import Map from './components/Map';
 import { Menu, X } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
 
@@ -20,9 +21,9 @@ function App() {
   return (
     <div className="bg-gradient-to-b from-slate-900 to-black min-h-screen text-white">
       {/* Fixed Header */}
-      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-6 md:px-20 lg:px-30 py-4 bg-teal-100 shadow-lg">
+      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-8 md:px-20 py-4 bg-gradient-to-r from-teal-700 to-cyan-700 shadow-lg">
         {/* Logo */}
-        <div className="flex flex-row items-center space-x-4 flex-1">
+        <div className="flex flex-row items-center space-x-4 flex-shrink-0">
           <Link to="/" className="flex items-center space-x-4">
             <img
               src="https://res.cloudinary.com/djvcd6qvd/image/upload/v1749971278/DP_v9uief.png"
@@ -32,34 +33,32 @@ function App() {
             <h1 className="text-orange-500 text-3xl font-bold">Sahasra Digitals</h1>
           </Link>
         </div>
-        <div className="hidden md:block flex-1"></div>
-
         {/* Desktop Menu - Centered */}
-        <div className="hidden md:flex space-x-20 absolute left-1/2  transform -translate-x-1/2">
-          <Link to="/" className="text-xl hover:text-orange-400 font-bold text-black">Home</Link>
-          <Link to="/about" className="text-xl hover:text-orange-400 font-bold text-black">About Us</Link>
-          <Link to="/services" className="text-xl hover:text-orange-400 font-bold text-black">Services</Link>
-          <Link to="/gallery" className="text-xl hover:text-orange-400 font-bold text-black">Gallery</Link>
-          {/* <Link to="/leads" className="text-xl hover:text-orange-400">Leads</Link> */}
-          <Link to="/contact Us" className="text-xl hover:text-orange-400 font-bold text-black">Contact Us</Link>
+        <div className="hidden md:flex flex-1 justify-center">
+          <div className="flex space-x-12">
+            <Link to="/" className="text-xl hover:text-orange-400 font-bold text-white">Home</Link>
+            <Link to="/about" className="text-xl hover:text-orange-400 font-bold text-white">About Us</Link>
+            <Link to="/services" className="text-xl hover:text-orange-400 font-bold text-white">Services</Link>
+            <Link to="/gallery" className="text-xl hover:text-orange-400 font-bold text-white">Gallery</Link>
+            <Link to="/contact Us" className="text-xl hover:text-orange-400 font-bold text-white">Contact Us</Link>
+            <Link to="/map" className="text-xl hover:text-orange-400 font-bold text-white">Map</Link>
+          </div>
         </div>
-
         {/* Mobile Toggle Button */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-black hover:text-orange-500 transition">
+        <div className="md:hidden flex-shrink-0">
+          <button onClick={toggleMenu} className="text-white hover:text-orange-500 transition">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="absolute top-full left-0 w-full bg-black/90 flex flex-col items-start p-4 space-y-4 md:hidden z-50">
-            <Link to="/" onClick={toggleMenu} className="hover:text-orange-400">Home</Link>
-            <Link to="/about" onClick={toggleMenu} className="hover:text-orange-400">About</Link>
-            <Link to="/services" onClick={toggleMenu} className="hover:text-orange-400">Services</Link>
-            <Link to="/gallery" onClick={toggleMenu} className="hover:text-orange-400">Gallery</Link>
-            {/* <Link to="/leads" onClick={toggleMenu} className="hover:text-orange-400">Leads</Link> */}
-            <Link to="/contact Us" onClick={toggleMenu} className="hover:text-orange-400">Contact Us</Link>
+          <div className="absolute top-full left-0 w-full bg-gradient-to-r from-teal-800 to-cyan-800 flex flex-col items-start p-4 space-y-4 md:hidden z-50">
+            <Link to="/" onClick={toggleMenu} className="hover:text-orange-400 text-white">Home</Link>
+            <Link to="/about" onClick={toggleMenu} className="hover:text-orange-400 text-white">About</Link>
+            <Link to="/services" onClick={toggleMenu} className="hover:text-orange-400 text-white">Services</Link>
+            <Link to="/gallery" onClick={toggleMenu} className="hover:text-orange-400 text-white">Gallery</Link>
+            <Link to="/contact Us" onClick={toggleMenu} className="hover:text-orange-400 text-white">Contact Us</Link>
+            <Link to="/map" onClick={toggleMenu} className="hover:text-orange-400 text-white">Map</Link>
           </div>
         )}
       </nav>
@@ -72,8 +71,27 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact Us" element={<Contact />} />
+          <Route path="/map" element={<Map />} />
         </Routes>
       </div>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/917893940717"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 rounded-full shadow-lg w-16 h-16 flex items-center justify-center transition-all duration-200"
+        aria-label="Chat on WhatsApp"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+          fill="currentColor"
+          className="w-9 h-9 text-white"
+        >
+          <path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.832 4.584 2.236 6.393L4 29l7.828-2.05C13.416 27.68 14.686 28 16 28c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.13 0-2.238-.188-3.287-.557l-.235-.08-4.65 1.217 1.24-4.527-.153-.236C7.188 18.238 7 17.13 7 16c0-5.065 4.135-9.2 9.2-9.2S25.4 10.935 25.4 16 21.265 25.2 16.2 25.2zm5.29-7.29c-.27-.135-1.6-.793-1.847-.883-.247-.09-.427-.135-.607.135-.18.27-.697.883-.855 1.063-.157.18-.315.202-.585.067-.27-.135-1.14-.42-2.17-1.34-.803-.715-1.345-1.597-1.504-1.867-.157-.27-.017-.416.12-.55.124-.123.28-.32.42-.48.14-.16.187-.27.28-.45.09-.18.045-.337-.022-.472-.067-.135-.607-1.47-.832-2.01-.22-.53-.445-.457-.607-.465-.157-.007-.337-.01-.517-.01-.18 0-.47.067-.717.337-.247.27-.94.92-.94 2.24 0 1.32.96 2.59 1.093 2.77.135.18 1.89 2.89 4.59 3.94.642.22 1.14.35 1.53.45.642.16 1.23.137 1.695.083.517-.06 1.6-.655 1.825-1.288.225-.633.225-1.177.157-1.288-.067-.11-.247-.18-.517-.315z" />
+        </svg>
+      </a>
 
       {/* Global Footer */}
       <footer className="bg-gradient-to-b from-black to-slate-900 text-white py-16">

@@ -5,14 +5,18 @@ import toast, { Toaster } from 'react-hot-toast';
 const API_URL = 'https://sahasra-backend.onrender.com' || 'http://localhost:5000';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', company: '', message: '' });
 
   const validateForm = () => {
-    const { name, email, message } = formData;
+    const { name, email, phone, company, message } = formData;
     if (!name.trim()) return 'Name is required';
     if (!email.trim()) return 'Email is required';
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) return 'Enter a valid email address';
+    if (!phone.trim()) return 'Phone number is required';
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(phone)) return 'Enter a valid 10-digit phone number';
+    if (!company.trim()) return 'Please tell us what your company does';
     if (!message.trim()) return 'Message is required';
     if (message.length < 10) return 'Message should be at least 10 characters';
     return null;
@@ -30,7 +34,7 @@ const Contact = () => {
       await axios.post(`${API_URL}/api/contact`, formData);
       toast.dismiss();
       toast.success('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', company: '', message: '' });
     } catch (error) {
       toast.dismiss();
       toast.error('Failed to send message. Please try again.');
@@ -60,6 +64,20 @@ const Contact = () => {
               />
             </div>
             <div>
+              <label className="block mb-1 text-orange-400 font-semibold">Phone Number</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Enter your phone number"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                className="w-full px-4 py-2 rounded bg-slate-100 text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                required
+                pattern="\d{10}"
+                maxLength={10}
+              />
+            </div>
+            <div>
               <label className="block mb-1 text-orange-400 font-semibold">Email Address</label>
               <input
                 type="email"
@@ -67,6 +85,17 @@ const Contact = () => {
                 placeholder="Enter your email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className="w-full px-4 py-2 rounded bg-slate-100 text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
+              />
+            </div>
+            <div>
+              <label className="block mb-1 text-orange-400 font-semibold">What does your company do?</label>
+              <input
+                type="text"
+                name="company"
+                placeholder="Briefly describe your company"
+                value={formData.company}
+                onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                 className="w-full px-4 py-2 rounded bg-slate-100 text-black border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
               />
             </div>

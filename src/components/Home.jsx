@@ -9,14 +9,14 @@ const API_URL = 'https://sahasra-backend.onrender.com' || 'http://localhost:5000
 
 
 const Home = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', company: '', message: '', subject: '' });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const validateForm = () => {
-    const { name, email, phone, message } = formData;
+    const { name, email, phone, company, message } = formData;
 
     if (!name.trim()) return 'Name is required';
     if (!email.trim()) return 'Email is required';
@@ -25,6 +25,7 @@ const Home = () => {
     if (!phone.trim()) return 'Phone number is required';
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(phone)) return 'Enter a valid 10-digit phone number';
+    if (!company.trim()) return 'Please tell us what your company does';
     if (!message.trim()) return 'Message is required';
     if (message.length < 10) return 'Message should be at least 10 characters';
 
@@ -44,7 +45,7 @@ const Home = () => {
       await axios.post(`${API_URL}/api/contact`, formData);
       toast.dismiss();
       toast.success('Message sent successfully!');
-      setFormData({ name: '', email: '', phone: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', company: '', message: '', subject: '' });
     } catch (error) {
       toast.dismiss();
       toast.error('Failed to send message. Please try again.');
@@ -60,6 +61,24 @@ const Home = () => {
         <HeroSlider />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/50 z-0"></div>
+      </section>
+
+      {/* Company Promo Video Section */}
+      <section className="w-full flex flex-col items-center justify-center bg-white py-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-6 text-center">See What We Do</h2>
+        <div className="w-full  rounded-xl overflow-hidden shadow-lg border border-orange-200 bg-black">
+          <video
+            src="/promo.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/public/images/banner1.png"
+                className="w-full  object-contain"
+              >
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </section>
 
       {/* Main Content Section (Headline, Tagline, CTA, Contact) */}
@@ -104,6 +123,22 @@ const Home = () => {
               required
               pattern="\d{10}"
               maxLength={10}
+            />
+            <input
+              type="text"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+              placeholder="What does your company do?"
+              className="w-full p-3 rounded bg-white text-black placeholder-gray-400 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
+              required
+            />
+            <input 
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              placeholder="Subject"
             />
             <textarea
               name="message"
