@@ -16,14 +16,14 @@ const HeroSlider = () => {
       loop={true}
       autoplay={{ delay: 4000 }}
       pagination={{ clickable: true }}
-      className="absolute inset-0 z-0 h-full w-full"
+      className="absolute inset-0 z-0  w-full"
     >
       {slides.map((src, index) => (
         <SwiperSlide key={index}>
           <img
             src={src}
             alt={`Banner ${index + 1}`}
-            className="w-full h-full object-fill"
+            className="w-full object-fill"
           />
         </SwiperSlide>
       ))}

@@ -57,7 +57,7 @@ const Home = () => {
       <Toaster position="top-center" reverseOrder={false} />
 
       {/* 🖼️ Hero Slider Section */}
-      <section className="relative h-[80vh] md:h-[90vh] pt-20 md:pt-20">
+      <section className="relative  pt-20 md:pt-20">
         <HeroSlider />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/50 z-0"></div>
@@ -66,7 +66,7 @@ const Home = () => {
       {/* Company Promo Video Section */}
       <section className="w-full flex flex-col items-center justify-center bg-white py-12">
         <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-6 text-center">See What We Do</h2>
-        <div className="w-full  rounded-xl overflow-hidden shadow-lg border border-orange-200 bg-black">
+        <div className="w-full overflow-hidden ">
           <video
             src="/promo.mp4"
             autoPlay
