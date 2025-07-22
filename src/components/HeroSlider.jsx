@@ -5,9 +5,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const slides = [
-  '/images/banner1.png',
-  '/images/banner2.jpg',
-  '/images/banner3.png',
+  '/images/banner1.jpeg',
+  '/images/banner2.jpeg',
 ];
 
 const HeroSlider = () => {
