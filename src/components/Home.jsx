@@ -9,7 +9,7 @@ const API_URL = 'https://sahasra-backend.onrender.com' || 'http://localhost:5000
 
 
 const Home = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', company: '', message: '', subject: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', company: '', message: '' });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -45,7 +45,7 @@ const Home = () => {
       await axios.post(`${API_URL}/api/contact`, formData);
       toast.dismiss();
       toast.success('Message sent successfully!');
-      setFormData({ name: '', email: '', phone: '', company: '', message: '', subject: '' });
+      setFormData({ name: '', email: '', phone: '', company: '', message: '' });
     } catch (error) {
       toast.dismiss();
       toast.error('Failed to send message. Please try again.');
@@ -57,14 +57,14 @@ const Home = () => {
       <Toaster position="top-center" reverseOrder={false} />
 
       {/* 🖼️ Hero Slider Section */}
-      <section className="relative  pt-20 md:pt-20">
+      <section className="relative h-80 md:h-150  pt-20 md:pt-20 mb-10">
         <HeroSlider />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/50 z-0"></div>
       </section>
 
       {/* Company Promo Video Section */}
-      <section className="w-full flex flex-col items-center justify-center bg-white py-12">
+      {/* <section className="w-full flex flex-col items-center justify-center bg-white py-12">
         <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-6 text-center">See What We Do</h2>
         <div className="w-full overflow-hidden ">
           <video
@@ -79,7 +79,7 @@ const Home = () => {
             Your browser does not support the video tag.
           </video>
         </div>
-      </section>
+      </section> */}
 
       {/* Main Content Section (Headline, Tagline, CTA, Contact) */}
       <section className="relative px-6 md:px-30 py-16 flex flex-col md:flex-row justify-between items-center bg-white text-black">
@@ -132,13 +132,6 @@ const Home = () => {
               placeholder="What does your company do?"
               className="w-full p-3 rounded bg-white text-black placeholder-gray-400 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
               required
-            />
-            <input 
-              type="text"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              placeholder="Subject"
             />
             <textarea
               name="message"
@@ -248,38 +241,94 @@ const Home = () => {
 
       {/* Services Section (short list) */}
       <section className="bg-slate-100 w-full py-16">
-        <div className="max-w-5xl mx-auto px-4 md:px-10">
+        <div className="max-w-8xl mx-auto px-4 md:px-10">
           <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-10 text-center">Our Services</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow hover:shadow-orange-500 transition-all duration-300 hover:scale-105 flex flex-col items-center md:items-start text-center md:text-left">
-              <span className="mb-3 text-orange-500">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" /><path strokeLinecap="round" strokeLinejoin="round" d="M8 6h8M8 10h8M8 14h8" /></svg>
-              </span>
-              <h3 className="text-xl font-semibold mb-2 text-orange-400">Brochure, Poster & Banner Design</h3>
-              <p className="text-gray-700 leading-relaxed">Eye-catching print and digital designs to promote your business and events.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+              <div className="w-full mb-4 shadow-lg transition">
+                <img
+                  src="/images/service1.png"
+                  alt="Brochure, Poster & Banner Design"
+                  className="object-fill h-50 w-full"
+                />
+              </div>
+              <div className='flex flex-col justify-between h-full p-4'>
+              <h3 className="text-xl font-bold mb-2 text-orange-500">Brochure, Poster & Banner Design</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">Eye-catching print and digital designs to promote your business and events.</p>
+              <a
+                href="https://wa.me/9581823990"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+              >
+                Learn More
+              </a>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow hover:shadow-orange-500 transition-all duration-300 hover:scale-105 flex flex-col items-center md:items-start text-center md:text-left">
-              <span className="mb-3 text-orange-500">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" /><path strokeLinecap="round" strokeLinejoin="round" d="M16 3v4M8 3v4" /></svg>
-              </span>
-              <h3 className="text-xl font-semibold mb-2 text-orange-400">Video Editing & Promotional Videos</h3>
-              <p className="text-gray-700 leading-relaxed">Captivate your audience with professional video editing and compelling promotional videos.</p>
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+              <div className="w-full mb-4 shadow-lg transition">
+                <img
+                  src="/images/service2.png"
+                  alt="Video Editing & Promotional Videos"
+                  className="object-fill h-50 w-full"
+                />
+              </div>
+              <div className='flex flex-col justify-between h-full p-4'>
+              <h3 className="text-xl font-bold mb-2 text-orange-500">Video Editing & Promotional Videos</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">Captivate your audience with professional video editing and compelling promotional videos.</p>
+              <a
+                href="https://wa.me/9581823990"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+              >
+                Learn More
+              </a>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow hover:shadow-orange-500 transition-all duration-300 hover:scale-105 flex flex-col items-center md:items-start text-center md:text-left">
-              <span className="mb-3 text-orange-500">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3" /></svg>
-              </span>
-              <h3 className="text-xl font-semibold mb-2 text-orange-400">Logo & Business Card Designing</h3>
-              <p className="text-gray-700 leading-relaxed">Memorable logos and business cards that make a lasting impression.</p>
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+              <div className="w-full mb-4 shadow-lg transition">
+                <img
+                  src="/images/service3.jpg"
+                  alt="Logo & Business Card Designing"
+                  className="object-fill h-50 w-full"
+                />
+              </div>
+              <div className='flex flex-col justify-between h-full p-4'>
+              <h3 className="text-xl font-bold mb-2 text-orange-500">Logo & Business Card Designing</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">Memorable logos and business cards that make a lasting impression.</p>
+              <a
+                href="https://wa.me/9581823990"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+              >
+                Learn More
+              </a>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow hover:shadow-orange-500 transition-all duration-300 hover:scale-105 flex flex-col items-center md:items-start text-center md:text-left">
-              <span className="mb-3 text-orange-500">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8h2a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8a2 2 0 012-2h2" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 12v4m0 0l-2-2m2 2l2-2" /></svg>
-              </span>
-              <h3 className="text-xl font-semibold mb-2 text-orange-400">Social Media Handling & Marketing</h3>
-              <p className="text-gray-700 leading-relaxed">Grow your brand and engage your audience with strategic social media management.</p>
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+              <div className="w-full mb-4 shadow-lg transition">
+                <img
+                  src="/images/service4.jpg"
+                  alt="Social Media Handling & Marketing"
+                  className="object-fill h-50 w-full"
+                />
+              </div>
+              <div className='flex flex-col justify-between h-full p-4'>
+              <h3 className="text-xl font-bold mb-2 text-orange-500">Social Media Handling & Marketing</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">Grow your brand and engage your audience with strategic social media management.</p>
+              <a
+                href="https://wa.me/9581823990"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+              >
+                Learn More
+              </a>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow hover:shadow-orange-500 transition-all duration-300 hover:scale-105 flex flex-col items-center md:items-start text-center md:text-left">
+            {/* <div className="bg-white p-6 rounded-xl shadow hover:shadow-orange-500 transition-all duration-300 hover:scale-105 flex flex-col items-center md:items-start text-center md:text-left">
               <span className="mb-3 text-orange-500">
                 <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" /></svg>
               </span>
@@ -292,7 +341,7 @@ const Home = () => {
               </span>
               <h3 className="text-xl font-semibold mb-2 text-orange-400">Digital Printing Solutions</h3>
               <p className="text-gray-700 leading-relaxed">High-quality digital printing for all your marketing and branding materials.</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
