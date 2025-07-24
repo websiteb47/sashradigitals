@@ -131,8 +131,8 @@ const Contact = () => {
             <div>
               <h3 className="text-xl font-semibold text-orange-400 mb-1">Address</h3>
               <p className="text-gray-700">
-                31-1-1425, Sali Pet, Arundelpet,<br />
-                Guntur, Andhra Pradesh - 522601.
+                6-17-43, 17/3, Arundelpet,<br />
+                Guntur, Andhra Pradesh - 522002.
               </p>
             </div>
             <div>
