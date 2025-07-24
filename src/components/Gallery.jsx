@@ -8,10 +8,26 @@ const Gallery = () => {
         <p className="text-lg text-gray-700 mb-10 text-center max-w-2xl mx-auto">
           Explore our real work! Here is a sample from our recent projects.
         </p>
-        <div className="flex justify-center">
+        <div className="flex flex-col md:flex-row justify-center gap-4 ">
           <div className="overflow-hidden rounded-xl shadow hover:shadow-lg transition group bg-white max-w-xs w-full">
             <img
               src="/images/gallery.jpeg"
+              alt="Gallery Sample"
+              className="w-full h-82 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div className="overflow-hidden rounded-xl shadow hover:shadow-lg transition group bg-white max-w-xs w-full">
+            <img
+              src="/images/gallery2.jpeg"
+              alt="Gallery Sample"
+              className="w-full h-82 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          </div>
+          <div className="overflow-hidden rounded-xl shadow hover:shadow-lg transition group bg-white max-w-xs w-full">
+            <img
+              src="/images/gallery3.jpeg"
               alt="Gallery Sample"
               className="w-full h-82 object-cover group-hover:scale-105 transition-transform duration-300"
               loading="lazy"

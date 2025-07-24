@@ -156,8 +156,8 @@ function App() {
                   </svg>
                   <div>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      31-1-1425, Sali Pet, Arundelpet,<br />
-                      Guntur, Andhra Pradesh - 522601.
+                      6-17-43, 17/3, Arundelpet,<br />
+                      Guntur, Andhra Pradesh - 522002.
                     </p>
                   </div>
                 </div>

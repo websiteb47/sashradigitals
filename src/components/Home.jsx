@@ -253,7 +253,7 @@ const Home = () => {
                 />
               </div>
               <div className='flex flex-col justify-between h-full p-4'>
-              <h3 className="text-xl font-bold mb-2 text-orange-500">Brochure, Poster & Banner Design</h3>
+              <h3 className="text-xl font-bold mb-2 text-black">Brochure, Poster & Banner Design</h3>
               <p className="text-gray-700 leading-relaxed mb-4">Eye-catching print and digital designs to promote your business and events.</p>
               <a
                 href="https://wa.me/9581823990"
@@ -274,7 +274,7 @@ const Home = () => {
                 />
               </div>
               <div className='flex flex-col justify-between h-full p-4'>
-              <h3 className="text-xl font-bold mb-2 text-orange-500">Video Editing & Promotional Videos</h3>
+              <h3 className="text-xl font-bold mb-2 text-black">Video Editing & Promotional Videos</h3>
               <p className="text-gray-700 leading-relaxed mb-4">Captivate your audience with professional video editing and compelling promotional videos.</p>
               <a
                 href="https://wa.me/9581823990"
@@ -295,7 +295,7 @@ const Home = () => {
                 />
               </div>
               <div className='flex flex-col justify-between h-full p-4'>
-              <h3 className="text-xl font-bold mb-2 text-orange-500">Logo & Business Card Designing</h3>
+              <h3 className="text-xl font-bold mb-2 text-black">Logo & Business Card Designing</h3>
               <p className="text-gray-700 leading-relaxed mb-4">Memorable logos and business cards that make a lasting impression.</p>
               <a
                 href="https://wa.me/9581823990"
@@ -316,7 +316,7 @@ const Home = () => {
                 />
               </div>
               <div className='flex flex-col justify-between h-full p-4'>
-              <h3 className="text-xl font-bold mb-2 text-orange-500">Social Media Handling & Marketing</h3>
+              <h3 className="text-xl font-bold mb-2 text-black">Social Media Handling & Marketing</h3>
               <p className="text-gray-700 leading-relaxed mb-4">Grow your brand and engage your audience with strategic social media management.</p>
               <a
                 href="https://wa.me/9581823990"
