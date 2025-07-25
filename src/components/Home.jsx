@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 import HeroSlider from './HeroSlider';
@@ -10,6 +10,20 @@ const API_URL = 'https://sahasra-backend.onrender.com' || 'http://localhost:5000
 
 const Home = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', company: '', message: '' });
+  const [showModal, setShowModal] = useState(false);
+  const [dontShowAgain, setDontShowAgain] = useState(false);
+
+  useEffect(() => {
+    const dontShow = localStorage.getItem('grandOpeningDontShow');
+    if (!dontShow) setShowModal(true);
+  }, []);
+
+  const handleCloseModal = () => {
+    if (dontShowAgain) {
+      localStorage.setItem('grandOpeningDontShow', 'true');
+    }
+    setShowModal(false);
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -152,18 +166,81 @@ const Home = () => {
         </section>
       </section>
 
+      {/* Brochure / Plans Section */}
+      <section className="w-full py-16 bg-gradient-to-br from-white via-orange-50 to-slate-100">
+        <div className="w-full mx-auto px-4 md:px-10">
+          <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-slate-800 mb-10 text-center tracking-tight">SAHASRA DIGITALS BROCHURE</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Basic Plan */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center border-t-8 border-orange-400  hover:shadow-2xl transition-transform duration-300">
+              <h3 className="text-xl md:text-2xl font-heading font-bold mb-4 text-orange-500 tracking-wide">Basic Plan</h3>
+              <p className="font-heading font-semibold text-xl md:text-2xl text-orange-500 mb-6">₹8,000<span className="text-base font-normal text-gray-500">/30 days</span></p>
+              <ul className="text-gray-600 mb-2 space-y-3 text-left font-sans text-base md:text-lg w-full pl-2">
+                <li className="flex items-start gap-2"><span className="mt-1 text-orange-400">✔</span>10 Graphic Designs & 2 Reels</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-orange-400">✔</span>Maintenance of pages: Facebook, Insta, Twitter, Google</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-orange-400">✔</span>Special days for Festivals</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-orange-400">✔</span>Guidance Related Competitor Research</li>
+              </ul>
+            </div>
+            {/* Business Plan */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center border-t-8 border-blue-500  hover:shadow-2xl transition-transform duration-300">
+              <h3 className="text-xl md:text-2xl font-heading font-bold mb-4 text-blue-600 tracking-wide">Business Plan</h3>
+              <p className="font-heading font-semibold text-xl md:text-2xl text-blue-600 mb-6">₹12,000<span className="text-base font-normal text-gray-500">/30 days</span></p>
+              <ul className="text-gray-600 mb-2 space-y-3 text-left font-sans text-base md:text-lg w-full pl-2">
+                <li className="flex items-start gap-2"><span className="mt-1 text-blue-400">✔</span>All Basic Plan Services</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-blue-400">✔</span>Sponsored Ads in Facebook & Instagram</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-blue-400">✔</span>Weekly once Response Strategy with Google Meet</li>
+              </ul>
+            </div>
+            {/* Professional Plan (Most Popular) */}
+            <div className="relative bg-white rounded-2xl shadow-2xl p-8 flex flex-col items-center border-t-8 border-purple-600  hover:shadow-2xl transition-transform duration-300">
+              <span className="absolute -top-5 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg uppercase tracking-wide">Most Popular</span>
+              <h3 className="text-xl md:text-2xl font-heading font-bold mb-4 text-purple-700 tracking-wide">Professional Plan</h3>
+              <p className="font-heading font-semibold text-xl md:text-2xl text-purple-700 mb-6">₹18,000<span className="text-base font-normal text-gray-500">/30 days</span></p>
+              <ul className="text-gray-600 mb-2 space-y-3 text-left font-sans text-base md:text-lg w-full pl-2">
+                <li className="flex items-start gap-2"><span className="mt-1 text-purple-400">✔</span>All Standard Plan Services (Basic + Business)</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-purple-400">✔</span>Premium GMB Optimization with local SEO</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-purple-400">✔</span>Campaigns & Sponsorship in Facebook, Instagram & Google</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-purple-400">✔</span>Monthly once WhatsApp Campaign with client data
+                  <a href="https://wa.me/9581823990" target="_blank" rel="noopener noreferrer" className="ml-2">
+                    <svg className="w-5 h-5 text-green-500 inline" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.18-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22c-1.85 0-3.63-.5-5.18-1.44l-.37-.22-3.67.96.98-3.58-.24-.37A9.94 9.94 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.13-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.28-.32.42-.48.14-.16.19-.27.28-.45.09-.18.05-.34-.02-.47-.07-.13-.61-1.47-.83-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.47.07-.72.34-.25.27-.94.92-.94 2.24 0 1.32.96 2.59 1.09 2.77.14.18 1.89 2.89 4.59 3.94.64.22 1.14.35 1.53.45.64.16 1.23.14 1.7.08.52-.06 1.6-.66 1.83-1.29.23-.63.23-1.18.16-1.29-.07-.11-.25-.18-.52-.32z" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            {/* Premium Plan (Ads) */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center border-t-8 border-emerald-500 hover:shadow-2xl transition-transform duration-300">
+              <h3 className="text-xl md:text-2xl font-heading font-bold mb-4 text-emerald-600 tracking-wide">Premium Plan (Ads)</h3>
+              <p className="font-heading font-semibold text-xl md:text-2xl text-emerald-600 mb-6">₹26,000<span className="text-base font-normal text-gray-500">/30 days</span></p>
+              <ul className="text-gray-600 mb-2 space-y-3 text-left font-sans text-base md:text-lg w-full pl-2">
+                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Profession Plan (Basic + Business + Professional)</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Facebook Ads, Instagram Ads, Google Ads & YouTube Ads, WhatsApp Ads</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Pinterest & LinkedIn Pages</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Reviews Management</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Customer Support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Us Section */}
       <section className="bg-[#0a0c69] w-full py-16">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 px-4 md:px-10">
           {/* Illustration/Icon */}
           <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-1/3 mb-8 md:mb-0">
-            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="About Sahasra Digitals" className="w-40 h-40 object-contain mx-auto" />
+            <img src="/images/about.jpeg" alt="About Sahasra Digitals" className="w-60 h-60 border-2 border-orange-500 rounded-full object-cover mx-auto" />
           </div>
           {/* Text Content */}
           <div className="w-full md:w-2/3 text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-orange-400 mb-6">About Us</h2>
             <p className="text-lg leading-relaxed mb-4 font-semibold text-white">Welcome to Sahasra Digitals</p>
-            <p className="text-lg leading-relaxed mb-4 text-white">Sahasra Digitals is a creative hub for all your digital design and branding needs. We are committed to delivering high-quality digital services that help your brand stand out. From graphic design to video editing and digital printing, we offer a wide range of professional solutions.</p>
+            <p className="text-lg leading-relaxed mb-4 text-white">Sahasra Digitals is a full-service digital marketing agency dedicated to helping businesses grow in the digital landscape. Established in 2024, Sahasra Digitals  was built on the vision of providing affordable, effective, and transparent online marketing solutions for small and medium businesses (SMBs), startups, and enterprises.
+              With a customer-first approach, Sahasra Digitals reach  delivers measurable results by combining creativity, data analytics, and strategic planning. The company offers end-to-end solutions</p> <br />
+            <p>Mrs.Surekha Ramarao Pothakamuri  the founder and CEO of Sahasra Digitals  a seasoned digital strategist with over 5 years of experience in marketing, branding, and technology. Before starting Sahasra Digitals , she worked with several digital marketing agencies, helping brands scale their online presence …and she working as a Private School Teacher ….she studied Bachelor Degree in Acharya Nagarjuna University ….She trained very well in facebook and instagram ads related classes and get many certificates …
+              She was skilled in all types of Social media Marketings & Ads Startegies ….GMB Profile Optimization …local Seo ….Creative Content Marketing Startegies ….</p>
             <h3 className="text-2xl font-bold text-orange-400 mt-8 mb-2">Our Mission</h3>
             <p className="text-lg leading-relaxed mb-4 text-white">To provide creative and quality-driven digital services to every customer with passion and perfection. With a focus on innovation and visual excellence, Sahasra Digitals is your trusted partner in your digital journey. <span className="font-semibold">Let your brand speak with design – Only at Sahasra Digitals!</span></p>
           </div>
@@ -207,28 +284,28 @@ const Home = () => {
         <div className="max-w-5xl mx-auto px-4 md:px-10">
           <h2 className="text-3xl md:text-4xl font-bold text-orange-400 mb-10 text-center">Our Expertise</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left">
               <span className="mb-3 text-orange-500">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
               </span>
               <h3 className="text-xl font-bold mb-2 text-black">Search Engine Optimization</h3>
               <p className="text-gray-700">Boost your visibility and ranking on search engines.</p>
             </div>
-            <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left">
               <span className="mb-3 text-orange-500">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8h2a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8a2 2 0 012-2h2" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 12v4m0 0l-2-2m2 2l2-2" /></svg>
               </span>
               <h3 className="text-xl font-bold mb-2 text-black">Social Media Marketing</h3>
               <p className="text-gray-700">Engage your audience and grow your brand online.</p>
             </div>
-            <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left">
               <span className="mb-3 text-orange-500">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 17l4 4 4-4m0-5V3a1 1 0 00-1-1H9a1 1 0 00-1 1v9m10 4h.01" /></svg>
               </span>
               <h3 className="text-xl font-bold mb-2 text-black">Content Marketing</h3>
               <p className="text-gray-700">Create and share valuable content to attract customers.</p>
             </div>
-            <div className="flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left">
               <span className="mb-3 text-orange-500">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3" /><circle cx="12" cy="12" r="10" /></svg>
               </span>
@@ -244,27 +321,73 @@ const Home = () => {
         <div className="max-w-8xl mx-auto px-4 md:px-10">
           <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-10 text-center">Our Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            {/* 1. Social Media Marketing & Handling */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                  src="/images/service1.png"
-                  alt="Brochure, Poster & Banner Design"
+                  src="/images/service4.jpg"
+                  alt="Social Media Marketing & Handling"
                   className="object-fill h-50 w-full"
                 />
               </div>
               <div className='flex flex-col justify-between h-full p-4'>
-              <h3 className="text-xl font-bold mb-2 text-black">Brochure, Poster & Banner Design</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">Eye-catching print and digital designs to promote your business and events.</p>
-              <a
-                href="https://wa.me/9581823990"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
-              >
-                Learn More
-              </a>
+                <h3 className="text-xl font-bold mb-2 text-black">Social Media Marketing & Handling</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">Grow your brand and engage your audience with strategic social media management across all major platforms.</p>
+                <a
+                  href="https://wa.me/9581823990"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                >
+                  Learn More
+                </a>
               </div>
             </div>
+            {/* 2. SEO Consultancy */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+              <div className="w-full mb-4 shadow-lg transition">
+                <img
+                  src="/images/banner3.png"
+                  alt="SEO Consultancy"
+                  className="object-fill h-50 w-full"
+                />
+              </div>
+              <div className='flex flex-col justify-between h-full p-4'>
+                <h3 className="text-xl font-bold mb-2 text-black">SEO Consultancy</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">Boost your website's visibility and ranking with expert SEO strategies and ongoing consultancy.</p>
+                <a
+                  href="https://wa.me/9581823990"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+            {/* 3. Google Sponsored Ads */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+              <div className="w-full mb-4 shadow-lg transition">
+                <img
+                  src="/images/banner2.jpeg"
+                  alt="Google Sponsored Ads"
+                  className="object-fill h-50 w-full"
+                />
+              </div>
+              <div className='flex flex-col justify-between h-full p-4'>
+                <h3 className="text-xl font-bold mb-2 text-black">Google Sponsored Ads</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">Drive targeted traffic and maximize ROI with expertly managed Google Ads campaigns.</p>
+                <a
+                  href="https://wa.me/9581823990"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+            {/* 4. Video Editing & Promotional Videos */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
@@ -274,18 +397,41 @@ const Home = () => {
                 />
               </div>
               <div className='flex flex-col justify-between h-full p-4'>
-              <h3 className="text-xl font-bold mb-2 text-black">Video Editing & Promotional Videos</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">Captivate your audience with professional video editing and compelling promotional videos.</p>
-              <a
-                href="https://wa.me/9581823990"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
-              >
-                Learn More
-              </a>
+                <h3 className="text-xl font-bold mb-2 text-black">Video Editing & Promotional Videos</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">Captivate your audience with professional video editing and compelling promotional content.</p>
+                <a
+                  href="https://wa.me/9581823990"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                >
+                  Learn More
+                </a>
               </div>
             </div>
+            {/* 5. Brochure, Poster & Banner Design */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+              <div className="w-full mb-4 shadow-lg transition">
+                <img
+                  src="/images/service1.png"
+                  alt="Brochure, Poster & Banner Design"
+                  className="object-fill h-50 w-full"
+                />
+              </div>
+              <div className='flex flex-col justify-between h-full p-4'>
+                <h3 className="text-xl font-bold mb-2 text-black">Brochure, Poster & Banner Design</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">Eye-catching print and digital designs to promote your business and events.</p>
+                <a
+                  href="https://wa.me/9581823990"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+            {/* 6. Logo & Business Card Designing */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
@@ -295,53 +441,106 @@ const Home = () => {
                 />
               </div>
               <div className='flex flex-col justify-between h-full p-4'>
-              <h3 className="text-xl font-bold mb-2 text-black">Logo & Business Card Designing</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">Memorable logos and business cards that make a lasting impression.</p>
-              <a
-                href="https://wa.me/9581823990"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
-              >
-                Learn More
-              </a>
+                <h3 className="text-xl font-bold mb-2 text-black">Logo & Business Card Designing</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">Memorable logos and business cards that make a lasting impression.</p>
+                <a
+                  href="https://wa.me/9581823990"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                >
+                  Learn More
+                </a>
               </div>
             </div>
+            {/* 7. Photo Editing & Album Designing */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                  src="/images/service4.jpg"
-                  alt="Social Media Handling & Marketing"
+                  src="/images/gallery3.jpeg"
+                  alt="Photo Editing & Album Designing"
                   className="object-fill h-50 w-full"
                 />
               </div>
               <div className='flex flex-col justify-between h-full p-4'>
-              <h3 className="text-xl font-bold mb-2 text-black">Social Media Handling & Marketing</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">Grow your brand and engage your audience with strategic social media management.</p>
-              <a
-                href="https://wa.me/9581823990"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
-              >
-                Learn More
-              </a>
+                <h3 className="text-xl font-bold mb-2 text-black">Photo Editing & Album Designing</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">Professional photo editing and beautiful album layouts for personal and business needs.</p>
+                <a
+                  href="https://wa.me/9581823990"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                >
+                  Learn More
+                </a>
               </div>
             </div>
-            {/* <div className="bg-white p-6 rounded-xl shadow hover:shadow-orange-500 transition-all duration-300 hover:scale-105 flex flex-col items-center md:items-start text-center md:text-left">
-              <span className="mb-3 text-orange-500">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" /></svg>
-              </span>
-              <h3 className="text-xl font-semibold mb-2 text-orange-400">Photo Editing & Album Designing</h3>
-              <p className="text-gray-700 leading-relaxed">Professional photo editing and beautiful album layouts for personal and business needs.</p>
+            {/* 8. Digital Printing Solutions */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+              <div className="w-full mb-4 shadow-lg transition">
+                <img
+                  src="/images/gallery2.jpeg"
+                  alt="Digital Printing Solutions"
+                  className="object-fill h-50 w-full"
+                />
+              </div>
+              <div className='flex flex-col justify-between h-full p-4'>
+                <h3 className="text-xl font-bold mb-2 text-black">Digital Printing Solutions</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">High-quality digital printing for all your marketing and branding materials.</p>
+                <a
+                  href="https://wa.me/9581823990"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                >
+                  Learn More
+                </a>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow hover:shadow-orange-500 transition-all duration-300 hover:scale-105 flex flex-col items-center md:items-start text-center md:text-left">
-              <span className="mb-3 text-orange-500">
-                <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" /><path strokeLinecap="round" strokeLinejoin="round" d="M8 6h8M8 10h8M8 14h8" /></svg>
-              </span>
-              <h3 className="text-xl font-semibold mb-2 text-orange-400">Digital Printing Solutions</h3>
-              <p className="text-gray-700 leading-relaxed">High-quality digital printing for all your marketing and branding materials.</p>
-            </div> */}
+            {/* 9. Market Analysis */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+              <div className="w-full mb-4 shadow-lg transition">
+                <img
+                  src="/images/banner1.jpeg"
+                  alt="Market Analysis"
+                  className="object-fill h-50 w-full"
+                />
+              </div>
+              <div className='flex flex-col justify-between h-full p-4'>
+                <h3 className="text-xl font-bold mb-2 text-black">Market Analysis</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">In-depth market research and competitor analysis to inform your business strategy and growth.</p>
+                <a
+                  href="https://wa.me/9581823990"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+            {/* 10. Keyword Research */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+              <div className="w-full mb-4 shadow-lg transition">
+                <img
+                  src="/images/banner3.png"
+                  alt="Keyword Research"
+                  className="object-fill h-50 w-full"
+                />
+              </div>
+              <div className='flex flex-col justify-between h-full p-4'>
+                <h3 className="text-xl font-bold mb-2 text-black">Keyword Research</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">Discover the best keywords to target for your business to improve SEO and attract the right audience.</p>
+                <a
+                  href="https://wa.me/9581823990"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -434,7 +633,7 @@ const Home = () => {
             </SwiperSlide>
             {/* Testimonial 4 */}
             <SwiperSlide>
-                <div className="bg-white p-6 rounded-xl shadow-lg flex flex-col max-h-[120px] md:min-h-[180px]">
+              <div className="bg-white p-6 rounded-xl shadow-lg flex flex-col max-h-[120px] md:min-h-[180px]">
                 <div className="flex items-center mb-4">
                   <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sneha Reddy" className="w-12 h-12 rounded-full mr-4" />
                   <div>
@@ -458,9 +657,23 @@ const Home = () => {
         </div>
       </section>
 
-      
-     </div>
-   );
+      {/* Grand Opening Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 animate-fade-in">
+          <div className="relative bg-white rounded-lg shadow-2xl max-w-lg w-full flex flex-col p-4 items-center overflow-hidden">
+            <div className="relative w-full">
+              <img src="/images/grand-opening.jpeg" alt="Grand Opening Invitation" className="w-full max-h-[70vh] h-auto rounded-lg object-contain" />
+              <button onClick={handleCloseModal} className="absolute top-2 right-2 z-10 text-white bg-black bg-opacity-60 rounded-full w-8 h-8 flex items-center justify-center hover:bg-red-500 transition text-xl font-bold">&times;</button>
+            </div>
+            <label className="flex items-center mt-4 mb-2 text-sm text-gray-700">
+              <input type="checkbox" checked={dontShowAgain} onChange={e => setDontShowAgain(e.target.checked)} className="mr-2" />
+              Don’t show again
+            </label>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Home;

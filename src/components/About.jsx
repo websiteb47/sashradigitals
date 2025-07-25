@@ -6,7 +6,7 @@ const About = () => (
   <section className="bg-orange-50 w-full py-16 min-h-screen">
     <div className="max-w-2xl mx-auto flex flex-col items-center px-4 md:px-0">
       {/* Illustration at top */}
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="About Sahasra Digitals" className="w-40 h-40 object-contain mx-auto mb-8" />
+      <img src="/images/about.jpeg" alt="About Sahasra Digitals" className="w-60 h-60 border-2 border-orange-500 rounded-full object-cover mx-auto" />
       <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-8 text-center">About Us</h2>
 
       {/* Our Services Include */}
@@ -49,25 +49,25 @@ const About = () => (
       <div className="bg-white rounded-xl shadow p-6 w-full">
         <h3 className="text-2xl font-bold text-orange-400 mb-3 text-center">Our Expertise</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center md:items-start">
             <span className="mb-2 text-orange-500">
               <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
             </span>
             <span className="font-bold text-black">Search Engine Optimization</span>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center md:items-start">
             <span className="mb-2 text-orange-500">
               <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8h2a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8a2 2 0 012-2h2" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 12v4m0 0l-2-2m2 2l2-2" /></svg>
             </span>
             <span className="font-bold text-black">Social Media Marketing</span>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center md:items-start">
             <span className="mb-2 text-orange-500">
               <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 17l4 4 4-4m0-5V3a1 1 0 00-1-1H9a1 1 0 00-1 1v9m10 4h.01" /></svg>
             </span>
             <span className="font-bold text-black">Content Marketing</span>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center md:items-start">
             <span className="mb-2 text-orange-500">
               <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3" /><circle cx="12" cy="12" r="10" /></svg>
             </span>

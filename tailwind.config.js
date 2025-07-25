@@ -3,7 +3,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        sans: ['Open Sans', 'Poppins', 'sans-serif'], // for body
+        heading: ['Montserrat', 'Poppins', 'sans-serif'], // for headings
       },
     },
   },
