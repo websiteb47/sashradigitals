@@ -10,20 +10,6 @@ const API_URL = 'https://sahasra-backend.onrender.com' || 'http://localhost:5000
 
 const Home = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', company: '', message: '' });
-  const [showModal, setShowModal] = useState(false);
-  const [dontShowAgain, setDontShowAgain] = useState(false);
-
-  useEffect(() => {
-    const dontShow = localStorage.getItem('grandOpeningDontShow');
-    if (!dontShow) setShowModal(true);
-  }, []);
-
-  const handleCloseModal = () => {
-    if (dontShowAgain) {
-      localStorage.setItem('grandOpeningDontShow', 'true');
-    }
-    setShowModal(false);
-  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -61,6 +47,7 @@ const Home = () => {
       toast.success('Message sent successfully!');
       setFormData({ name: '', email: '', phone: '', company: '', message: '' });
     } catch (error) {
+      console.log(error);
       toast.dismiss();
       toast.error('Failed to send message. Please try again.');
     }
@@ -99,8 +86,8 @@ const Home = () => {
       <section className="relative px-6 md:px-30 py-16 flex flex-col md:flex-row justify-between items-center bg-white text-black">
         {/* Main Content */}
         <div className="relative z-10 w-full md:w-1/2 animate-fade-in">
-          <h2 className="text-4xl md:text-7xl font-serif font-bold">SAHASRA DIGITALS</h2>
-          <p className="mt-6 max-w-xl md:text-2xl text-gray-700">WE CARE AND PROMOTRE YOUR BUSINESS!</p>
+          <h2 className="text-4xl md:text-7xl font-serif font-bold"><span className="text-orange-500">S</span>ahasra <span className="text-orange-500">D</span>igitals</h2>
+          <p className="mt-6 max-w-xl font-bold md:text-2xl text-gray-700">WE CARE AND PROMOTRE YOUR BUSINESS!</p>
           <button className="mt-8 px-8 py-3 bg-orange-500 text-black font-bold hover:bg-orange-600 rounded-[0.5vw] transition">
             JOIN US
           </button>
@@ -169,7 +156,7 @@ const Home = () => {
       {/* Brochure / Plans Section */}
       <section className="w-full py-16 bg-gradient-to-br from-white via-orange-50 to-slate-100">
         <div className="w-full mx-auto px-4 md:px-10">
-          <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-slate-800 mb-10 text-center tracking-tight">SAHASRA DIGITALS BROCHURE</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-extrabold text-slate-800 mb-10 text-center tracking-tight">Our Plans</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Basic Plan */}
             <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center border-t-8 border-orange-400  hover:shadow-2xl transition-transform duration-300">
@@ -215,7 +202,7 @@ const Home = () => {
               <h3 className="text-xl md:text-2xl font-heading font-bold mb-4 text-emerald-600 tracking-wide">Premium Plan (Ads)</h3>
               <p className="font-heading font-semibold text-xl md:text-2xl text-emerald-600 mb-6">₹26,000<span className="text-base font-normal text-gray-500">/30 days</span></p>
               <ul className="text-gray-600 mb-2 space-y-3 text-left font-sans text-base md:text-lg w-full pl-2">
-                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Profession Plan (Basic + Business + Professional)</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Professional Plan (Basic + Business + Professional)</li>
                 <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Facebook Ads, Instagram Ads, Google Ads & YouTube Ads, WhatsApp Ads</li>
                 <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Pinterest & LinkedIn Pages</li>
                 <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Reviews Management</li>
@@ -227,22 +214,22 @@ const Home = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="bg-[#0a0c69] w-full py-16">
+      <section className="bg-orange-50 w-full py-16">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 px-4 md:px-10">
           {/* Illustration/Icon */}
           <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-1/3 mb-8 md:mb-0">
-            <img src="/images/about.jpeg" alt="About Sahasra Digitals" className="w-60 h-60 border-2 border-orange-500 rounded-full object-cover mx-auto" />
+            <img src="/images/about.png" alt="About Sahasra Digitals" className="w-60 h-60 border-2 border-orange-500 rounded-full object-cover mx-auto" />
           </div>
           {/* Text Content */}
           <div className="w-full md:w-2/3 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-orange-400 mb-6">About Us</h2>
-            <p className="text-lg leading-relaxed mb-4 font-semibold text-white">Welcome to Sahasra Digitals</p>
-            <p className="text-lg leading-relaxed mb-4 text-white">Sahasra Digitals is a full-service digital marketing agency dedicated to helping businesses grow in the digital landscape. Established in 2024, Sahasra Digitals  was built on the vision of providing affordable, effective, and transparent online marketing solutions for small and medium businesses (SMBs), startups, and enterprises.
+            <h2 className="text-3xl md:text-4xl font-bold text-orange-500  mb-6">About Us</h2>
+            <p className="text-lg leading-relaxed mb-4 font-semibold text-black">Welcome to Sahasra Digitals</p>
+            <p className="text-lg leading-relaxed mb-4 text-black">Sahasra Digitals is a full-service digital marketing agency dedicated to helping businesses grow in the digital landscape. Established in 2024, Sahasra Digitals  was built on the vision of providing affordable, effective, and transparent online marketing solutions for small and medium businesses (SMBs), startups, and enterprises.
               With a customer-first approach, Sahasra Digitals reach  delivers measurable results by combining creativity, data analytics, and strategic planning. The company offers end-to-end solutions</p> <br />
-            <p>Mrs.Surekha Ramarao Pothakamuri  the founder and CEO of Sahasra Digitals  a seasoned digital strategist with over 5 years of experience in marketing, branding, and technology. Before starting Sahasra Digitals , she worked with several digital marketing agencies, helping brands scale their online presence …and she working as a Private School Teacher ….she studied Bachelor Degree in Acharya Nagarjuna University ….She trained very well in facebook and instagram ads related classes and get many certificates …
+            <p className='text-black'> <span className=" text-orange-500 font-bold  text-2xl">Mrs.Surekha Ramarao Pothakamuri</span>  the founder and CEO of Sahasra Digitals  a seasoned digital strategist with over 5 years of experience in marketing, branding, and technology. Before starting Sahasra Digitals , she worked with several digital marketing agencies, helping brands scale their online presence …and she working as a Private School Teacher ….she studied Bachelor Degree in Acharya Nagarjuna University ….She trained very well in facebook and instagram ads related classes and get many certificates …
               She was skilled in all types of Social media Marketings & Ads Startegies ….GMB Profile Optimization …local Seo ….Creative Content Marketing Startegies ….</p>
-            <h3 className="text-2xl font-bold text-orange-400 mt-8 mb-2">Our Mission</h3>
-            <p className="text-lg leading-relaxed mb-4 text-white">To provide creative and quality-driven digital services to every customer with passion and perfection. With a focus on innovation and visual excellence, Sahasra Digitals is your trusted partner in your digital journey. <span className="font-semibold">Let your brand speak with design – Only at Sahasra Digitals!</span></p>
+            <h3 className="text-2xl font-bold text-orange-500 mt-8 mb-2">Our Mission</h3>
+            <p className="text-lg leading-relaxed mb-4 text-black">To provide creative and quality-driven digital services to every customer with passion and perfection. With a focus on innovation and visual excellence, Sahasra Digitals is your trusted partner in your digital journey. Let your brand speak with design – Only at Sahasra Digitals!</p>
           </div>
         </div>
       </section>
@@ -284,29 +271,29 @@ const Home = () => {
         <div className="max-w-5xl mx-auto px-4 md:px-10">
           <h2 className="text-3xl md:text-4xl font-bold text-orange-400 mb-10 text-center">Our Expertise</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left">
-              <span className="mb-3 text-orange-500">
+            <div className="flex flex-col justify-center items-center md:items-center text-center md:text-center">
+              <span className="mb-3 text-blue-500">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
               </span>
               <h3 className="text-xl font-bold mb-2 text-black">Search Engine Optimization</h3>
               <p className="text-gray-700">Boost your visibility and ranking on search engines.</p>
             </div>
-            <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left">
-              <span className="mb-3 text-orange-500">
+            <div className="flex flex-col justify-center items-center md:items-center text-center md:text-center">
+              <span className="mb-3 text-green-500">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8h2a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8a2 2 0 012-2h2" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 12v4m0 0l-2-2m2 2l2-2" /></svg>
               </span>
               <h3 className="text-xl font-bold mb-2 text-black">Social Media Marketing</h3>
               <p className="text-gray-700">Engage your audience and grow your brand online.</p>
             </div>
-            <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left">
-              <span className="mb-3 text-orange-500">
+            <div className="flex flex-col justify-center items-center md:items-center text-center md:text-center">
+              <span className="mb-3 text-violet-500">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 17l4 4 4-4m0-5V3a1 1 0 00-1-1H9a1 1 0 00-1 1v9m10 4h.01" /></svg>
               </span>
               <h3 className="text-xl font-bold mb-2 text-black">Content Marketing</h3>
               <p className="text-gray-700">Create and share valuable content to attract customers.</p>
             </div>
-            <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left">
-              <span className="mb-3 text-orange-500">
+            <div className="flex flex-col justify-center items-center md:items-center text-center md:text-center">
+              <span className="mb-3 text-pink-500">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3" /><circle cx="12" cy="12" r="10" /></svg>
               </span>
               <h3 className="text-xl font-bold mb-2 text-black">Pay-Per-Click</h3>
@@ -325,7 +312,7 @@ const Home = () => {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                  src="/images/service4.jpg"
+                  src="/images/service3.jpeg"
                   alt="Social Media Marketing & Handling"
                   className="object-fill h-50 w-full"
                 />
@@ -347,7 +334,7 @@ const Home = () => {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                  src="/images/banner3.png"
+                  src="/images/service4.jpeg"
                   alt="SEO Consultancy"
                   className="object-fill h-50 w-full"
                 />
@@ -369,7 +356,7 @@ const Home = () => {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                  src="/images/banner2.jpeg"
+                  src="/images/service5.jpeg"
                   alt="Google Sponsored Ads"
                   className="object-fill h-50 w-full"
                 />
@@ -391,7 +378,7 @@ const Home = () => {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                  src="/images/service2.png"
+                  src="/images/service6.jpeg"
                   alt="Video Editing & Promotional Videos"
                   className="object-fill h-50 w-full"
                 />
@@ -413,7 +400,7 @@ const Home = () => {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                  src="/images/service1.png"
+                  src="/images/service7.jpeg"
                   alt="Brochure, Poster & Banner Design"
                   className="object-fill h-50 w-full"
                 />
@@ -435,7 +422,7 @@ const Home = () => {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                  src="/images/service3.jpg"
+                  src="/images/service10.jpeg"
                   alt="Logo & Business Card Designing"
                   className="object-fill h-50 w-full"
                 />
@@ -454,10 +441,10 @@ const Home = () => {
               </div>
             </div>
             {/* 7. Photo Editing & Album Designing */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+            {/* <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                  src="/images/gallery3.jpeg"
+                  src="/images/service9.jpeg"
                   alt="Photo Editing & Album Designing"
                   className="object-fill h-50 w-full"
                 />
@@ -474,9 +461,9 @@ const Home = () => {
                   Learn More
                 </a>
               </div>
-            </div>
+            </div> */}
             {/* 8. Digital Printing Solutions */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+            {/* <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
                   src="/images/gallery2.jpeg"
@@ -496,12 +483,12 @@ const Home = () => {
                   Learn More
                 </a>
               </div>
-            </div>
+            </div> */}
             {/* 9. Market Analysis */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                  src="/images/banner1.jpeg"
+                  src="/images/service8.jpeg"
                   alt="Market Analysis"
                   className="object-fill h-50 w-full"
                 />
@@ -523,7 +510,7 @@ const Home = () => {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                  src="/images/banner3.png"
+                  src="/images/service9.jpeg"
                   alt="Keyword Research"
                   className="object-fill h-50 w-full"
                 />
@@ -657,21 +644,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Grand Opening Modal */}
-      {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 animate-fade-in">
-          <div className="relative bg-white rounded-lg shadow-2xl max-w-lg w-full flex flex-col p-4 items-center overflow-hidden">
-            <div className="relative w-full">
-              <img src="/images/grand-opening.jpeg" alt="Grand Opening Invitation" className="w-full max-h-[70vh] h-auto rounded-lg object-contain" />
-              <button onClick={handleCloseModal} className="absolute top-2 right-2 z-10 text-white bg-black bg-opacity-60 rounded-full w-8 h-8 flex items-center justify-center hover:bg-red-500 transition text-xl font-bold">&times;</button>
-            </div>
-            <label className="flex items-center mt-4 mb-2 text-sm text-gray-700">
-              <input type="checkbox" checked={dontShowAgain} onChange={e => setDontShowAgain(e.target.checked)} className="mr-2" />
-              Don’t show again
-            </label>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

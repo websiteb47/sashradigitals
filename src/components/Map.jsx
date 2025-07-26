@@ -1,6 +1,6 @@
 import React from 'react';
 
-const companyAddress = '31-1-1425, Sali Pet, Arundelpet, Guntur, Andhra Pradesh - 522601';
+const companyAddress = '31-1-1425, Sali Pet, Arundelpet, Guntur, Andhra Pradesh 522601';
 const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(companyAddress)}`;
 const navigationUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(companyAddress)}`;
 

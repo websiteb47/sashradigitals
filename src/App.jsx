@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
@@ -13,15 +13,24 @@ import { useLocation } from 'react-router-dom'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen)
   const location = useLocation()
   const isHome = location.pathname === '/'
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
 
   return (
     <div className="bg-gradient-to-b from-slate-900 to-black min-h-screen text-white">
       {/* Fixed Header */}
-      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-8 md:px-20 py-4 bg-gradient-to-r from-teal-700 to-cyan-700 shadow-lg">
+      <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-8 md:px-20 py-4 transition-colors duration-300 ${scrolled ? 'bg-gradient-to-r from-purple-700 to-indigo-700 shadow-lg' : 'bg-gradient-to-r from-teal-700 to-cyan-700'}`}>
         {/* Logo */}
         <div className="flex flex-row items-center space-x-4 flex-shrink-0">
           <Link to="/" className="flex items-center space-x-4">
@@ -30,18 +39,21 @@ function App() {
               alt="tree"
               className="w-12 h-12 rounded-lg hover:scale-105 transition-transform duration-200"
             />
-            <h1 className="text-orange-500 text-3xl font-bold">Sahasra Digitals</h1>
+            <h1 className="text-3xl font-bold italic">
+              <span className="text-teal-300 font-serif"> <span className="text-orange-500">S</span>ahasra</span>
+              <span className="text-cyan-400 font-serif"> <span className="text-orange-500">D</span>igitals</span>
+            </h1>
           </Link>
         </div>
         {/* Desktop Menu - Centered */}
         <div className="hidden md:flex flex-1 justify-center">
           <div className="flex space-x-12">
-            <Link to="/" className="text-xl hover:text-orange-400 font-bold text-white">Home</Link>
-            <Link to="/about" className="text-xl hover:text-orange-400 font-bold text-white">About Us</Link>
-            <Link to="/services" className="text-xl hover:text-orange-400 font-bold text-white">Services</Link>
-            <Link to="/gallery" className="text-xl hover:text-orange-400 font-bold text-white">Gallery</Link>
-            <Link to="/contact Us" className="text-xl hover:text-orange-400 font-bold text-white">Contact Us</Link>
-            <Link to="/map" className="text-xl hover:text-orange-400 font-bold text-white">Map</Link>
+            <Link to="/" className="text-xl hover:text-orange-500 font-bold text-white">Home</Link>
+            <Link to="/about" className="text-xl hover:text-orange-500 font-bold text-white">About Us</Link>
+            <Link to="/services" className="text-xl hover:text-orange-500 font-bold text-white">Services</Link>
+            <Link to="/gallery" className="text-xl hover:text-orange-500 font-bold text-white">Gallery</Link>
+            <Link to="/contact Us" className="text-xl hover:text-orange-500 font-bold text-white">Contact Us</Link>
+            <Link to="/map" className="text-xl hover:text-orange-500 font-bold text-white">Map</Link>
           </div>
         </div>
         {/* Mobile Toggle Button */}
@@ -129,7 +141,7 @@ function App() {
 
                 <a href="https://www.instagram.com/sahasra_digitals/?next=%2F" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-orange-600 transition">
                   <svg className="w-5 h-5 text-white" fill="red" viewBox="0 0 24 24">
-                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 2.25a5.25 5.25 0 1 1-5.25 5.25a5.25 5.25 0 0 1 5.25-5.25zm0 1.5a3.75 3.75 0 1 0 3.75 3.75a3.75 3.75 0 0 0-3.75-3.75zm5.25 1.25a1 1 0 1 1-2 0a1 1 0 0 1 2 0z" />
+                    <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 3.5zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 2.25a5.25 5.25 0 1 1-5.25 5.25a5.25 5.25 0 0 1 5.25-5.25zm0 1.5a3.75 3.75 0 1 0 3.75 3.75a3.75 3.75 0 0 0-3.75-3.75zm5.25 1.25a1 1 0 1 1-2 0a1 1 0 0 1 2 0z" />
                   </svg>
                 </a>
                 <a href="https://www.linkedin.com/in/surekha-pothakamuri-41b7a3373/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-blue-700 transition">
