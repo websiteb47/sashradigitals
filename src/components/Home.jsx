@@ -219,7 +219,7 @@ const Home = () => {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 px-4 md:px-10">
           {/* Illustration/Icon */}
           <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-1/3 mb-8 md:mb-0">
-            <img src="/images/about.png" alt="About Sahasra Digitals" className="w-60 h-60 border-2 border-orange-500 rounded-full object-cover mx-auto" />
+            <img src="/images/about.png" alt="About Sahasra Digitals" className=" border-2 border-[#ddd] rounded-2xl object-cover mx-auto shadow-lg" />
           </div>
           {/* Text Content */}
           <div className="w-full md:w-2/3 text-center md:text-left">
@@ -244,33 +244,145 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="bg-slate-100 w-full py-16">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 px-4 md:px-10">
-          {/* Icon List */}
-          <div className="w-full md:w-1/2 mb-8 md:mb-0">
-            <h2 className="text-3xl md:text-4xl font-bold text-orange-400 mb-6 text-center md:text-left">Why Choose Us?</h2>
-            <ul className="space-y-6">
-              <li className="flex items-start gap-4">
-                <span className="text-orange-500 mt-1"><svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg></span>
-                <span className='text-black'><span className="font-semibold text-black">Expert Team, Proven Success:</span> Our team is made up of experienced professionals with deep knowledge in digital marketing and design. With a strong portfolio and a track record of delivering success, we know what it takes to make your brand shine.</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="text-orange-500 mt-1"><svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" /></svg></span>
-                <span className='text-black'><span className="font-semibold text-black">Cutting-Edge Creativity:</span> We stay ahead of the curve by using the latest tools, technologies, and industry trends. Our innovative approach ensures your brand gets a modern, competitive edge in a fast-paced digital world.</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="text-orange-500 mt-1"><svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3" /><circle cx="12" cy="12" r="10" /></svg></span>
-                <span className='text-black'><span className="font-semibold text-black">Customer-First Approach:</span> At Sahasra Digitals, you’re not just a client — you're a partner. We listen, understand, and work closely with you to turn your vision into impactful results.</span>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="text-orange-500 mt-1"><svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 9V7a5 5 0 00-10 0v2a5 5 0 0010 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 17v.01" /></svg></span>
-                <span className='text-black'><span className="font-semibold text-black">Focused on Real Results:</span> We don’t just create – we deliver. Our work is driven by results, aimed at growing your business, building your brand, and boosting your bottom line.</span>
-              </li>
-            </ul>
+      <section className="bg-gradient-to-br from-slate-50 via-white to-orange-50 w-full py-20">
+        <div className="max-w-6xl mx-auto px-4 md:px-10">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+              Why Choose <span className="text-orange-500">Sahasra Digitals</span>?
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              We combine creativity, technology, and strategic thinking to deliver exceptional results that drive your business forward.
+            </p>
           </div>
-          {/* Illustration/Icon */}
-          <div className="flex-shrink-0 flex justify-center md:justify-end w-full md:w-1/2">
-            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Why Choose Us" className="w-40 h-40 object-contain mx-auto" />
+
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left Side - Features */}
+            <div className="space-y-8">
+              {/* Feature 1 */}
+              <div className="group flex items-start gap-6 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-orange-500">
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-800 mb-2">Expert Team, Proven Success</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Our experienced professionals bring deep knowledge in digital marketing and design. With a strong portfolio and proven track record, we know what it takes to make your brand shine in the competitive digital landscape.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 2 */}
+              <div className="group flex items-start gap-6 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-blue-500">
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-800 mb-2">Cutting-Edge Creativity</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    We stay ahead of the curve using the latest tools, technologies, and industry trends. Our innovative approach ensures your brand gets a modern, competitive edge in today's fast-paced digital world.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="group flex items-start gap-6 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-green-500">
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-800 mb-2">Customer-First Approach</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    At Sahasra Digitals, you're not just a client — you're a partner. We listen, understand, and work closely with you to turn your vision into impactful results that exceed expectations.
+                  </p>
+                </div>
+              </div>
+
+              {/* Feature 4 */}
+              <div className="group flex items-start gap-6 p-6 rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-purple-500">
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-slate-800 mb-2">Results-Driven Strategy</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    We don't just create — we deliver measurable results. Our work is driven by data and analytics, aimed at growing your business, building your brand, and boosting your bottom line.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Visual Element */}
+            <div className="relative">
+              {/* Main Image */}
+              <div className="relative z-10">
+                <img 
+                  src="https://cdn-icons-png.flaticon.com/512/190/190411.png" 
+                  alt="Why Choose Us" 
+                  className="w-full max-w-md mx-auto object-contain drop-shadow-2xl"
+                />
+              </div>
+              
+              {/* Background Decorative Elements */}
+              <div className="absolute top-10 right-10 w-20 h-20 bg-orange-200 rounded-full opacity-60 animate-pulse"></div>
+              <div className="absolute bottom-20 left-10 w-16 h-16 bg-blue-200 rounded-full opacity-60 animate-pulse delay-1000"></div>
+              <div className="absolute top-1/2 left-5 w-12 h-12 bg-green-200 rounded-full opacity-60 animate-pulse delay-500"></div>
+              
+              {/* Stats Cards */}
+              <div className="absolute -bottom-8 -left-8 bg-white rounded-xl shadow-lg p-4 border border-orange-100">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-orange-500">100+</div>
+                  <div className="text-sm text-slate-600">Happy Clients</div>
+                </div>
+              </div>
+              
+              <div className="absolute -top-8 -right-8 bg-white rounded-xl shadow-lg p-4 border border-blue-100">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-500">120+</div>
+                  <div className="text-sm text-slate-600">Projects Completed</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl p-8 shadow-xl">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Ready to Transform Your Digital Presence?
+              </h3>
+              <p className="text-orange-100 mb-6 max-w-2xl mx-auto">
+                Join hundreds of satisfied clients who have trusted us to grow their business online.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="https://wa.me/9581823990"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors duration-300 inline-flex items-center justify-center gap-2"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.18-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22c-1.85 0-3.63-.5-5.18-1.44l-.37-.22-3.67.96.98-3.58-.24-.37A9.94 9.94 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.13-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.28-.32.42-.48.14-.16.19-.27.28-.45.09-.18.05-.34-.02-.47-.07-.13-.61-1.47-.83-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.47.07-.72.34-.25.27-.94.92-.94 2.24 0 1.32.96 2.59 1.09 2.77.14.18 1.89 2.89 4.59 3.94.64.22 1.14.35 1.53.45.64.16 1.23.14 1.7.08.52-.06 1.6-.66 1.83-1.29.23-.63.23-1.18.16-1.29-.07-.11-.25-.18-.52-.32z" />
+                  </svg>
+                  Start Your Project
+                </a>
+                <Link 
+                  to="/contact Us" 
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors duration-300"
+                >
+                  Get Free Consultation
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -427,7 +539,7 @@ const Home = () => {
         <div className="mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-orange-400 mb-8 text-center">What Our Clients Say</h2>
           <p className="text-lg text-gray-700 mb-10 text-center max-w-2xl mx-auto">
-            Hear from Indian business owners and professionals who have trusted Sahasra Digitals for their digital journey.
+            Hear from local Andhra Pradesh business owners and professionals who have trusted Sahasra Digitals for their digital journey.
           </p>
           <Swiper
             modules={[Autoplay]}
@@ -444,18 +556,28 @@ const Home = () => {
           >
             {/* Testimonial 1 */}
             <SwiperSlide>
-              <div className="bg-white p-6 rounded-xl shadow-lg flex flex-col max-h-[120px] md:min-h-[180px]">
-                <div className="flex items-center mb-4">
-                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Verma" className="w-12 h-12 rounded-full mr-4" />
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100 relative overflow-hidden">
+                {/* Background Digital Marketing Icon */}
+                <div className="absolute top-4 right-4 opacity-10">
+                  <svg className="w-24 h-24 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
                   <div>
-                    <h4 className="text-black font-semibold">Rahul Verma</h4>
-                    <p className="text-orange-400 text-sm">Owner, Verma Electronics (Delhi)</p>
+                    <h4 className="text-black font-bold text-lg">Venkatesh Rao</h4>
+                    <p className="text-orange-500 text-sm font-medium">Owner, Rao Electronics (Guntur)</p>
                   </div>
                 </div>
-                <p className="text-gray-700 leading-relaxed flex-1 line-clamp-4">
+                <p className="text-gray-700 leading-relaxed text-base mb-6 relative z-10">
                   "Sahasra Digitals designed our new logo and managed our social media. Our shop's footfall and online orders have both increased! Very professional and creative team."
                 </p>
-                <div className="flex text-orange-400 mt-4">
+                <div className="flex text-orange-400 relative z-10">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -466,18 +588,28 @@ const Home = () => {
             </SwiperSlide>
             {/* Testimonial 2 */}
             <SwiperSlide>
-              <div className="bg-white p-6 rounded-xl shadow-lg flex flex-col max-h-[120px] md:min-h-[180px]">
-                <div className="flex items-center mb-4">
-                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Nair" className="w-12 h-12 rounded-full mr-4" />
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100 relative overflow-hidden">
+                {/* Background Video/Content Marketing Icon */}
+                <div className="absolute top-4 right-4 opacity-10">
+                  <svg className="w-24 h-24 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
                   <div>
-                    <h4 className="text-black font-semibold">Priya Nair</h4>
-                    <p className="text-orange-400 text-sm">Founder, Nair Boutique (Kochi)</p>
+                    <h4 className="text-black font-bold text-lg">Lakshmi Devi</h4>
+                    <p className="text-orange-500 text-sm font-medium">Owner, Lakshmi Saree Center (Vijayawada)</p>
                   </div>
                 </div>
-                <p className="text-gray-700 leading-relaxed flex-1 line-clamp-4">
+                <p className="text-gray-700 leading-relaxed text-base mb-6 relative z-10">
                   "The video editing and promotional content Sahasra created for us went viral in our city! Our brand is now recognized by so many more people. Highly recommended."
                 </p>
-                <div className="flex text-orange-400 mt-4">
+                <div className="flex text-orange-400 relative z-10">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -488,18 +620,28 @@ const Home = () => {
             </SwiperSlide>
             {/* Testimonial 3 */}
             <SwiperSlide>
-              <div className="bg-white p-6 rounded-xl shadow-lg flex flex-col max-h-[120px] md:min-h-[180px]">
-                <div className="flex items-center mb-4">
-                  <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Amit Singh" className="w-12 h-12 rounded-full mr-4" />
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100 relative overflow-hidden">
+                {/* Background Social Media Marketing Icon */}
+                <div className="absolute top-4 right-4 opacity-10">
+                  <svg className="w-24 h-24 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                  </svg>
+                </div>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
                   <div>
-                    <h4 className="text-black font-semibold">Amit Singh</h4>
-                    <p className="text-orange-400 text-sm">Director, Singh Foods (Lucknow)</p>
+                    <h4 className="text-black font-bold text-lg">Krishna Prasad</h4>
+                    <p className="text-orange-500 text-sm font-medium">Owner, Prasad Sweets & Snacks (Nellore)</p>
                   </div>
                 </div>
-                <p className="text-gray-700 leading-relaxed flex-1 line-clamp-4">
+                <p className="text-gray-700 leading-relaxed text-base mb-6 relative z-10">
                   "We got our banners, business cards, and social media handled by Sahasra. The designs are top-notch and the team is very responsive. Our business has grown a lot!"
                 </p>
-                <div className="flex text-orange-400 mt-4">
+                <div className="flex text-orange-400 relative z-10">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -510,18 +652,28 @@ const Home = () => {
             </SwiperSlide>
             {/* Testimonial 4 */}
             <SwiperSlide>
-              <div className="bg-white p-6 rounded-xl shadow-lg flex flex-col max-h-[120px] md:min-h-[180px]">
-                <div className="flex items-center mb-4">
-                  <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sneha Reddy" className="w-12 h-12 rounded-full mr-4" />
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-orange-100 relative overflow-hidden">
+                {/* Background Photo/Design Icon */}
+                <div className="absolute top-4 right-4 opacity-10">
+                  <svg className="w-24 h-24 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                  </div>
                   <div>
-                    <h4 className="text-black font-semibold">Sneha Reddy</h4>
-                    <p className="text-orange-400 text-sm">Owner, Reddy Studio (Hyderabad)</p>
+                    <h4 className="text-black font-bold text-lg">Padma Rani</h4>
+                    <p className="text-orange-500 text-sm font-medium">Owner, Padma Photo Studio (Kurnool)</p>
                   </div>
                 </div>
-                <p className="text-gray-700 leading-relaxed flex-1 line-clamp-4">
+                <p className="text-gray-700 leading-relaxed text-base mb-6 relative z-10">
                   "Their photo editing and album designing service is the best in the city. My clients love the albums and I get more referrals now. Thank you, Sahasra Digitals!"
                 </p>
-                <div className="flex text-orange-400 mt-4">
+                <div className="flex text-orange-400 relative z-10">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
