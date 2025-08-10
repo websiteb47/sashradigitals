@@ -5,6 +5,7 @@ import HeroSlider from './HeroSlider';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import { Link } from 'react-router-dom';
 const API_URL = 'https://sahasra-backend.onrender.com' || 'http://localhost:5000';
 
 
@@ -87,7 +88,7 @@ const Home = () => {
         {/* Main Content */}
         <div className="relative z-10 w-full md:w-1/2 animate-fade-in">
           <h2 className="text-4xl md:text-7xl font-serif font-bold"><span className="text-orange-500">S</span>ahasra <span className="text-orange-500">D</span>igitals</h2>
-          <p className="mt-6 max-w-xl font-bold md:text-2xl text-gray-700">WE CARE AND PROMOTRE YOUR BUSINESS!</p>
+          <p className="mt-6 max-w-xl font-bold md:text-2xl text-gray-700">WE CARE AND PROMOTE YOUR BUSINESS!</p>
           <button className="mt-8 px-8 py-3 bg-orange-500 text-black font-bold hover:bg-orange-600 rounded-[0.5vw] transition">
             JOIN US
           </button>
@@ -222,14 +223,22 @@ const Home = () => {
           </div>
           {/* Text Content */}
           <div className="w-full md:w-2/3 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-orange-500  mb-6">About Us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-6">About Us</h2>
             <p className="text-lg leading-relaxed mb-4 font-semibold text-black">Welcome to Sahasra Digitals</p>
-            <p className="text-lg leading-relaxed mb-4 text-black">Sahasra Digitals is a full-service digital marketing agency dedicated to helping businesses grow in the digital landscape. Established in 2024, Sahasra Digitals  was built on the vision of providing affordable, effective, and transparent online marketing solutions for small and medium businesses (SMBs), startups, and enterprises.
-              With a customer-first approach, Sahasra Digitals reach  delivers measurable results by combining creativity, data analytics, and strategic planning. The company offers end-to-end solutions</p> <br />
-            <p className='text-black'> <span className=" text-orange-500 font-bold  text-2xl">Mrs.Surekha Ramarao Pothakamuri</span>  the founder and CEO of Sahasra Digitals  a seasoned digital strategist with over 5 years of experience in marketing, branding, and technology. Before starting Sahasra Digitals , she worked with several digital marketing agencies, helping brands scale their online presence …and she working as a Private School Teacher ….she studied Bachelor Degree in Acharya Nagarjuna University ….She trained very well in facebook and instagram ads related classes and get many certificates …
-              She was skilled in all types of Social media Marketings & Ads Startegies ….GMB Profile Optimization …local Seo ….Creative Content Marketing Startegies ….</p>
-            <h3 className="text-2xl font-bold text-orange-500 mt-8 mb-2">Our Mission</h3>
-            <p className="text-lg leading-relaxed mb-4 text-black">To provide creative and quality-driven digital services to every customer with passion and perfection. With a focus on innovation and visual excellence, Sahasra Digitals is your trusted partner in your digital journey. Let your brand speak with design – Only at Sahasra Digitals!</p>
+            <p className="text-lg leading-relaxed mb-6 text-black">
+              Sahasra Digitals is a full-service digital marketing agency dedicated to helping businesses grow in the digital landscape. Established in 2024, we provide affordable, effective, and transparent online marketing solutions for small and medium businesses, startups, and enterprises.
+            </p>
+            <p className="text-lg leading-relaxed mb-6 text-black">
+              <span className="text-orange-500 font-bold text-xl">Mrs. Surekha Ramarao Pothakamuri</span>, our founder and CEO, is a seasoned digital strategist with over 5 years of experience in marketing, branding, and technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/about" className="inline-block bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300 text-center">
+                Read More About Us
+              </Link>
+              <Link to="/contact Us" className="inline-block border-2 border-orange-500 text-orange-500 px-8 py-3 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-colors duration-300 text-center">
+                Get In Touch
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -305,229 +314,110 @@ const Home = () => {
 
       {/* Services Section (short list) */}
       <section className="bg-slate-100 w-full py-16">
-        <div className="max-w-8xl mx-auto px-4 md:px-10">
+        <div className="w-full mx-auto px-4 md:px-10">
           <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-10 text-center">Our Services</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {/* 1. Social Media Marketing & Handling */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100 h-full">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
                   src="/images/service3.jpeg"
                   alt="Social Media Marketing & Handling"
-                  className="object-fill h-50 w-full"
+                  className="object-fill h-52 w-full"
                 />
               </div>
-              <div className='flex flex-col justify-between h-full p-4'>
-                <h3 className="text-xl font-bold mb-2 text-black">Social Media Marketing & Handling</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">Grow your brand and engage your audience with strategic social media management across all major platforms.</p>
+              <div className='flex flex-col justify-between h-full p-6 flex-1'>
+                <div>
+                  <h3 className="text-xl font-bold mb-3 text-black">Social Media Marketing & Handling</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">Grow your brand and engage your audience with strategic social media management across all major platforms.</p>
+                </div>
                 <a
                   href="https://wa.me/9581823990"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                  className="mt-auto px-6 py-3 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
                 >
                   Learn More
                 </a>
               </div>
             </div>
             {/* 2. SEO Consultancy */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100 h-full">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
                   src="/images/service4.jpeg"
                   alt="SEO Consultancy"
-                  className="object-fill h-50 w-full"
+                  className="object-fill h-52 w-full"
                 />
               </div>
-              <div className='flex flex-col justify-between h-full p-4'>
-                <h3 className="text-xl font-bold mb-2 text-black">SEO Consultancy</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">Boost your website's visibility and ranking with expert SEO strategies and ongoing consultancy.</p>
+              <div className='flex flex-col justify-between h-full p-6 flex-1'>
+                <div>
+                  <h3 className="text-xl font-bold mb-3 text-black">SEO Consultancy</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">Boost your website's visibility and ranking with expert SEO strategies and ongoing consultancy.</p>
+                </div>
                 <a
                   href="https://wa.me/9581823990"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                  className="mt-auto px-6 py-3 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
                 >
                   Learn More
                 </a>
               </div>
             </div>
-            {/* 3. Google Sponsored Ads */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
-              <div className="w-full mb-4 shadow-lg transition">
-                <img
-                  src="/images/service5.jpeg"
-                  alt="Google Sponsored Ads"
-                  className="object-fill h-50 w-full"
-                />
-              </div>
-              <div className='flex flex-col justify-between h-full p-4'>
-                <h3 className="text-xl font-bold mb-2 text-black">Google Sponsored Ads</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">Drive targeted traffic and maximize ROI with expertly managed Google Ads campaigns.</p>
-                <a
-                  href="https://wa.me/9581823990"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div>
-            {/* 4. Video Editing & Promotional Videos */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+            {/* 3. Video Editing & Promotional Videos */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100 h-full">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
                   src="/images/service6.jpeg"
                   alt="Video Editing & Promotional Videos"
-                  className="object-fill h-50 w-full"
+                  className="object-fill h-52 w-full"
                 />
               </div>
-              <div className='flex flex-col justify-between h-full p-4'>
-                <h3 className="text-xl font-bold mb-2 text-black">Video Editing & Promotional Videos</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">Captivate your audience with professional video editing and compelling promotional content.</p>
+              <div className='flex flex-col justify-between h-full p-6 flex-1'>
+                <div>
+                  <h3 className="text-xl font-bold mb-3 text-black">Video Editing & Promotional Videos</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">Captivate your audience with professional video editing and compelling promotional content.</p>
+                </div>
                 <a
                   href="https://wa.me/9581823990"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                  className="mt-auto px-6 py-3 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
                 >
                   Learn More
                 </a>
               </div>
             </div>
-            {/* 5. Brochure, Poster & Banner Design */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
-              <div className="w-full mb-4 shadow-lg transition">
-                <img
-                  src="/images/service7.jpeg"
-                  alt="Brochure, Poster & Banner Design"
-                  className="object-fill h-50 w-full"
-                />
-              </div>
-              <div className='flex flex-col justify-between h-full p-4'>
-                <h3 className="text-xl font-bold mb-2 text-black">Brochure, Poster & Banner Design</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">Eye-catching print and digital designs to promote your business and events.</p>
-                <a
-                  href="https://wa.me/9581823990"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div>
-            {/* 6. Logo & Business Card Designing */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+            {/* 4. Logo & Business Card Designing */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100 h-full">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
                   src="/images/service10.jpeg"
                   alt="Logo & Business Card Designing"
-                  className="object-fill h-50 w-full"
+                  className="object-fill h-52 w-full"
                 />
               </div>
-              <div className='flex flex-col justify-between h-full p-4'>
-                <h3 className="text-xl font-bold mb-2 text-black">Logo & Business Card Designing</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">Memorable logos and business cards that make a lasting impression.</p>
+              <div className='flex flex-col justify-between h-full p-6 flex-1'>
+                <div>
+                  <h3 className="text-xl font-bold mb-3 text-black">Logo & Business Card Designing</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">Memorable logos and business cards that make a lasting impression.</p>
+                </div>
                 <a
                   href="https://wa.me/9581823990"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
+                  className="mt-auto px-6 py-3 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
                 >
                   Learn More
                 </a>
               </div>
             </div>
-            {/* 7. Photo Editing & Album Designing */}
-            {/* <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
-              <div className="w-full mb-4 shadow-lg transition">
-                <img
-                  src="/images/service9.jpeg"
-                  alt="Photo Editing & Album Designing"
-                  className="object-fill h-50 w-full"
-                />
-              </div>
-              <div className='flex flex-col justify-between h-full p-4'>
-                <h3 className="text-xl font-bold mb-2 text-black">Photo Editing & Album Designing</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">Professional photo editing and beautiful album layouts for personal and business needs.</p>
-                <a
-                  href="https://wa.me/9581823990"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div> */}
-            {/* 8. Digital Printing Solutions */}
-            {/* <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
-              <div className="w-full mb-4 shadow-lg transition">
-                <img
-                  src="/images/gallery2.jpeg"
-                  alt="Digital Printing Solutions"
-                  className="object-fill h-50 w-full"
-                />
-              </div>
-              <div className='flex flex-col justify-between h-full p-4'>
-                <h3 className="text-xl font-bold mb-2 text-black">Digital Printing Solutions</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">High-quality digital printing for all your marketing and branding materials.</p>
-                <a
-                  href="https://wa.me/9581823990"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div> */}
-            {/* 9. Market Analysis */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
-              <div className="w-full mb-4 shadow-lg transition">
-                <img
-                  src="/images/service8.jpeg"
-                  alt="Market Analysis"
-                  className="object-fill h-50 w-full"
-                />
-              </div>
-              <div className='flex flex-col justify-between h-full p-4'>
-                <h3 className="text-xl font-bold mb-2 text-black">Market Analysis</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">In-depth market research and competitor analysis to inform your business strategy and growth.</p>
-                <a
-                  href="https://wa.me/9581823990"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
-                >
-                  Learn More
-                </a>
-              </div>
             </div>
-            {/* 10. Keyword Research */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
-              <div className="w-full mb-4 shadow-lg transition">
-                <img
-                  src="/images/service9.jpeg"
-                  alt="Keyword Research"
-                  className="object-fill h-50 w-full"
-                />
-              </div>
-              <div className='flex flex-col justify-between h-full p-4'>
-                <h3 className="text-xl font-bold mb-2 text-black">Keyword Research</h3>
-                <p className="text-gray-700 leading-relaxed mb-4">Discover the best keywords to target for your business to improve SEO and attract the right audience.</p>
-                <a
-                  href="https://wa.me/9581823990"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-center"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div>
+          <div className="text-center">
+            <Link to="/services" className="inline-block bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors duration-300">
+              View All Services
+            </Link>
           </div>
         </div>
       </section>

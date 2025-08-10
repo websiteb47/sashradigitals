@@ -52,8 +52,8 @@ const Gallery = () => {
                   src="/images/gallery7.jpeg"
                   alt="Advanced Certification"
                   className="w-full h-80 object-cover hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
-                />
+              loading="lazy"
+            />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-4 text-white">
                     <h4 className="text-lg font-semibold">Advanced Certification</h4>
@@ -76,48 +76,48 @@ const Gallery = () => {
                 src="/images/gallery.jpeg"
                 alt="Client Project Sample"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-                loading="lazy"
-              />
-            </div>
+              loading="lazy"
+            />
+          </div> 
             <div className="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group bg-white max-w-xs w-full transform hover:scale-105">
               <img
                 src="/images/gallery2.jpeg"
                 alt="Client Project Sample"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-                loading="lazy"
-              />
-            </div>
+              loading="lazy"
+            />
+          </div>
             <div className="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group bg-white max-w-xs w-full transform hover:scale-105">
               <img
                 src="/images/gallery3.jpeg"
                 alt="Client Project Sample"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-                loading="lazy"
-              />
-            </div>
+              loading="lazy"
+            />
+          </div>
             <div className="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group bg-white max-w-xs w-full transform hover:scale-105">
               <img
                 src="/images/gallery4.jpeg"
                 alt="Client Project Sample"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-                loading="lazy"
-              />
-            </div>
+              loading="lazy"
+            />
+          </div>
             <div className="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group bg-white max-w-xs w-full transform hover:scale-105">
               <img
                 src="/images/gallery5.jpeg"
                 alt="Client Project Sample"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-                loading="lazy"
-              />
-            </div>
+              loading="lazy"
+            />
+          </div>
             <div className="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group bg-white max-w-xs w-full transform hover:scale-105">
               <img
                 src="/images/gallery6.jpeg"
                 alt="Client Project Sample"
                 className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
-                loading="lazy"
-              />
+              loading="lazy"
+            />
             </div>
           </div>
         </div>

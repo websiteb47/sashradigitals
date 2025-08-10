@@ -15,6 +15,52 @@
   animation: fade-in 1s ease-out both;
 }
 
+/* Butterfly animation */
+@keyframes flutter {
+  0% { transform: translateX(-10%) translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.95; }
+  25% { transform: translateX(25vw) translateY(-5vh) rotate(10deg); }
+  50% { transform: translateX(50vw) translateY(3vh) rotate(-8deg); }
+  75% { transform: translateX(75vw) translateY(-2vh) rotate(6deg); }
+  100% { transform: translateX(110%) translateY(0) rotate(0deg); opacity: 0; }
+}
+
+@keyframes wing {
+  0%, 100% { transform: scaleY(1) rotate(0deg); }
+  50% { transform: scaleY(0.9) rotate(3deg); }
+}
+
+.butterfly {
+  position: absolute;
+  top: 30vh;
+  left: -10vw;
+  width: 36px;
+  height: 30px;
+  background: radial-gradient(circle at 30% 50%, #e6faff 35%, transparent 36%),
+              radial-gradient(circle at 70% 50%, #f3e8ff 35%, transparent 36%),
+              radial-gradient(circle at 50% 50%, #06b6d4 22%, transparent 23%);
+  border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+  animation: flutter 18s linear infinite;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35));
+}
+
+.butterfly::before, .butterfly::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 28px;
+  background: linear-gradient(135deg, #22d3ee, #a78bfa);
+  border-radius: 50% 50% 40% 40%;
+  top: 1px;
+  animation: wing 0.55s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.butterfly::before { left: -16px; transform: rotate(-15deg); }
+.butterfly::after { right: -16px; transform: rotate(15deg); }
+
+.butterfly-1 { top: 35vh; animation-duration: 20s; }
+
 body {
   @apply font-sans;
 }
@@ -23,5 +69,33 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', 'Poppins', 'sans-serif';
+}
+
+@keyframes butterfly-path {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  8% { transform: translate(15vw, -8vh) rotate(5deg) scale(1.1); }
+  16% { transform: translate(25vw, 5vh) rotate(-3deg) scale(0.95); }
+  24% { transform: translate(35vw, -12vh) rotate(8deg) scale(1.05); }
+  32% { transform: translate(20vw, 15vh) rotate(-6deg) scale(0.9); }
+  40% { transform: translate(-10vw, 8vh) rotate(4deg) scale(1.15); }
+  48% { transform: translate(-25vw, -5vh) rotate(-7deg) scale(0.85); }
+  56% { transform: translate(-15vw, 12vh) rotate(3deg) scale(1.2); }
+  64% { transform: translate(5vw, 18vh) rotate(-5deg) scale(0.9); }
+  72% { transform: translate(30vw, 10vh) rotate(6deg) scale(1.1); }
+  80% { transform: translate(15vw, -3vh) rotate(-4deg) scale(0.95); }
+  88% { transform: translate(-5vw, 5vh) rotate(2deg) scale(1.05); }
+  100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+}
+
+.butterfly-img {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  animation: butterfly-path 25s ease-in-out infinite;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
+  transform: translate(-50%, -50%);
 }
 
