@@ -17,9 +17,9 @@ const Services = () => (
           <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
             <div className="w-full mb-4 shadow-lg transition">
               <img
-                src="/images/service3.jpeg"
+                src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop"
                 alt="Social Media Marketing & Handling"
-                className="object-fill h-50 w-full"
+                className="object-cover h-50 w-full"
               />
             </div>
             <div className='flex flex-col justify-between h-full p-4'>
@@ -40,9 +40,9 @@ const Services = () => (
           <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
             <div className="w-full mb-4 shadow-lg transition">
               <img
-                src="/images/service4.jpeg"
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
                 alt="SEO Consultancy"
-                className="object-fill h-50 w-full"
+                className="object-cover h-50 w-full"
               />
             </div>
             <div className='flex flex-col justify-between h-full p-4'>
@@ -63,9 +63,9 @@ const Services = () => (
           <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
             <div className="w-full mb-4 shadow-lg transition">
               <img
-                src="/images/service5.jpeg"
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
                 alt="Google Sponsored Ads"
-                className="object-fill h-50 w-full"
+                className="object-cover h-50 w-full"
               />
             </div>
             <div className='flex flex-col justify-between h-full p-4'>
@@ -86,9 +86,9 @@ const Services = () => (
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                src="/images/service8.jpeg"
+                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=800&auto=format&fit=crop"
                 alt="Market Analysis"
-                  className="object-fill h-50 w-full"
+                  className="object-cover h-50 w-full"
                 />
               </div>
               <div className='flex flex-col justify-between h-full p-4'>
@@ -109,9 +109,9 @@ const Services = () => (
           <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
             <div className="w-full mb-4 shadow-lg transition">
               <img
-                src="/images/service9.jpeg"
+                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop"
                 alt="Keyword Research"
-                className="object-fill h-50 w-full"
+                className="object-cover h-50 w-full"
               />
             </div>
             <div className='flex flex-col justify-between h-full p-4'>
@@ -138,9 +138,9 @@ const Services = () => (
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                src="/images/service6.jpeg"
+                src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=800&auto=format&fit=crop"
                   alt="Video Editing & Promotional Videos"
-                  className="object-fill h-50 w-full"
+                  className="object-cover h-50 w-full"
                 />
               </div>
               <div className='flex flex-col justify-between h-full p-4'>
@@ -161,9 +161,9 @@ const Services = () => (
           <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
             <div className="w-full mb-4 shadow-lg transition">
               <img
-                src="/images/service7.jpeg"
+                src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=800&auto=format&fit=crop"
                 alt="Brochure, Poster & Banner Design"
-                className="object-fill h-50 w-full"
+                className="object-cover h-50 w-full"
               />
             </div>
             <div className='flex flex-col justify-between h-full p-4'>
@@ -184,9 +184,9 @@ const Services = () => (
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                src="/images/service10.jpeg"
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
                   alt="Logo & Business Card Designing"
-                  className="object-fill h-50 w-full"
+                  className="object-cover h-50 w-full"
                 />
               </div>
               <div className='flex flex-col justify-between h-full p-4'>
@@ -207,9 +207,9 @@ const Services = () => (
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
-                src="/images/gallery3.jpeg"
+                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=800&auto=format&fit=crop"
                 alt="Photo Editing & Album Designing"
-                  className="object-fill h-50 w-full"
+                  className="object-cover h-50 w-full"
                 />
               </div>
               <div className='flex flex-col justify-between h-full p-4'>
@@ -230,9 +230,9 @@ const Services = () => (
           <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
             <div className="w-full mb-4 shadow-lg transition">
               <img
-                src="/images/gallery2.jpeg"
+                src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=800&auto=format&fit=crop"
                 alt="Digital Printing Solutions"
-                className="object-fill h-50 w-full"
+                className="object-cover h-50 w-full"
               />
             </div>
             <div className='flex flex-col justify-between h-full p-4'>

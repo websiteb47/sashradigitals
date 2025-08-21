@@ -18,7 +18,7 @@ const About = () => (
         <p className="text-lg text-black leading-relaxed mb-4">
           Sahasra Digitals is a full-service digital marketing agency dedicated to helping businesses grow in the digital landscape. Established in 2024, Sahasra Digitals was built on the vision of providing affordable, effective, and transparent online marketing solutions for small and medium businesses (SMBs), startups, and enterprises.
         </p>
-        <p className="text-lg text-black leading-relaxed">
+        <p className="text-lg text-white-700 leading-relaxed">
           With a customer-first approach, Sahasra Digitals delivers measurable results by combining creativity, data analytics, and strategic planning. The company offers end-to-end solutions that help businesses establish a strong online presence and achieve their digital marketing goals.
         </p>
       </div>
@@ -133,7 +133,7 @@ const About = () => (
               </svg>
             </span>
             <h4 className="font-bold text-black">Search Engine Optimization</h4>
-            <p className="text-gray-600 text-sm mt-1">Boost your visibility and ranking</p>
+            <p className="text-white-600 text-sm mt-1">Boost your visibility and ranking</p>
           </div>
           <div className="flex flex-col items-center text-center">
             <span className="mb-3 text-green-500">
@@ -143,7 +143,7 @@ const About = () => (
               </svg>
             </span>
             <h4 className="font-bold text-black">Social Media Marketing</h4>
-            <p className="text-gray-600 text-sm mt-1">Engage your audience and grow</p>
+            <p className="text-white-600 text-sm mt-1">Engage your audience and grow</p>
           </div>
           <div className="flex flex-col items-center text-center">
             <span className="mb-3 text-violet-500">
@@ -152,7 +152,7 @@ const About = () => (
               </svg>
             </span>
             <h4 className="font-bold text-black">Content Marketing</h4>
-            <p className="text-gray-600 text-sm mt-1">Create valuable content</p>
+            <p className="text-white-600 text-sm mt-1">Create valuable content</p>
           </div>
           <div className="flex flex-col items-center text-center">
             <span className="mb-3 text-pink-500">
@@ -162,7 +162,7 @@ const About = () => (
               </svg>
             </span>
             <h4 className="font-bold text-black">Pay-Per-Click</h4>
-            <p className="text-gray-600 text-sm mt-1">Drive targeted traffic</p>
+            <p className="text-white-600 text-sm mt-1">Drive targeted traffic</p>
           </div>
         </div>
       </div>

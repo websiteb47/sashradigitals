@@ -19,6 +19,7 @@ function App() {
   const location = useLocation()
   const isHome = location.pathname === '/'
 
+  // Scroll-based color change for navbar
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -37,7 +38,7 @@ function App() {
     <div className="bg-gradient-to-b from-slate-900 to-black min-h-screen text-white">
       <Butterfly />
       {/* Fixed Header */}
-      <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-8 md:px-20 py-4 transition-colors duration-300 ${scrolled ? 'bg-gradient-to-r from-purple-700 to-indigo-700 shadow-lg' : 'bg-gradient-to-r from-teal-700 to-cyan-700'}`}>
+      <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-8 md:px-20 py-4 transition-all duration-300 ${scrolled ? 'bg-purple-900/80 backdrop-blur-md shadow-lg border-b border-purple-400/20' : 'bg-gradient-to-r from-slate-900 via-purple-900 to-slate-800 shadow-2xl backdrop-blur-md border-b border-white/10'}`}>
         {/* Logo */}
         <div className="flex flex-row items-center space-x-4 flex-shrink-0">
           <Link to="/" className="flex items-center space-x-4">
@@ -47,37 +48,37 @@ function App() {
               className="w-12 h-12 rounded-lg hover:scale-105 transition-transform duration-200"
             />
             <h1 className="text-3xl font-bold italic">
-              <span className="text-teal-300 font-serif"> <span className="text-orange-500">S</span>ahasra</span>
-              <span className="text-teal-300 font-serif"> <span className="text-orange-500">D</span>igitals</span>
+              <span className="text-white font-serif"> <span className="text-orange-400">S</span>ahasra</span>
+              <span className="text-white font-serif"> <span className="text-orange-400">D</span>igitals</span>
             </h1>
           </Link>
         </div>
         {/* Desktop Menu - Centered */}
         <div className="hidden md:flex flex-1 justify-center">
           <div className="flex space-x-12">
-            <Link to="/" className="text-xl hover:text-orange-500 font-bold text-white">Home</Link>
-            <Link to="/about" className="text-xl hover:text-orange-500 font-bold text-white">About Us</Link>
-            <Link to="/services" className="text-xl hover:text-orange-500 font-bold text-white">Services</Link>
-            <Link to="/gallery" className="text-xl hover:text-orange-500 font-bold text-white">Gallery</Link>
-            <Link to="/contact Us" className="text-xl hover:text-orange-500 font-bold text-white">Contact Us</Link>
-            <Link to="/map" className="text-xl hover:text-orange-500 font-bold text-white">Map</Link>
+            <Link to="/" className="text-xl hover:text-orange-400 font-bold text-white/90 hover:text-white transition-colors duration-300">Home</Link>
+            <Link to="/about" className="text-xl hover:text-orange-400 font-bold text-white/90 hover:text-white transition-colors duration-300">About Us</Link>
+            <Link to="/services" className="text-xl hover:text-orange-400 font-bold text-white/90 hover:text-white transition-colors duration-300">Services</Link>
+            <Link to="/gallery" className="text-xl hover:text-orange-400 font-bold text-white/90 hover:text-white transition-colors duration-300">Gallery</Link>
+            <Link to="/contact Us" className="text-xl hover:text-orange-400 font-bold text-white/90 hover:text-white transition-colors duration-300">Contact Us</Link>
+            <Link to="/map" className="text-xl hover:text-orange-400 font-bold text-white/90 hover:text-white transition-colors duration-300">Map</Link>
           </div>
         </div>
         {/* Mobile Toggle Button */}
         <div className="md:hidden flex-shrink-0">
-          <button onClick={toggleMenu} className="text-white hover:text-orange-500 transition">
+          <button onClick={toggleMenu} className="text-white/90 hover:text-orange-400 transition-colors duration-300">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="absolute top-full left-0 w-full bg-gradient-to-r from-teal-800 to-cyan-800 flex flex-col items-start p-4 space-y-4 md:hidden z-50">
-            <Link to="/" onClick={toggleMenu} className="hover:text-orange-400 text-white">Home</Link>
-            <Link to="/about" onClick={toggleMenu} className="hover:text-orange-400 text-white">About</Link>
-            <Link to="/services" onClick={toggleMenu} className="hover:text-orange-400 text-white">Services</Link>
-            <Link to="/gallery" onClick={toggleMenu} className="hover:text-orange-400 text-white">Gallery</Link>
-            <Link to="/contact Us" onClick={toggleMenu} className="hover:text-orange-400 text-white">Contact Us</Link>
-            <Link to="/map" onClick={toggleMenu} className="hover:text-orange-400 text-white">Map</Link>
+          <div className={`absolute top-full left-0 w-full flex flex-col items-start p-4 space-y-4 md:hidden z-50 border-t transition-all duration-300 ${scrolled ? 'bg-purple-900/90 backdrop-blur-md border-purple-400/20' : 'bg-gradient-to-r from-slate-900 via-purple-900 to-slate-800 border-white/10'}`}>
+            <Link to="/" onClick={toggleMenu} className="hover:text-orange-400 text-white/90 hover:text-white transition-colors duration-300">Home</Link>
+            <Link to="/about" onClick={toggleMenu} className="hover:text-orange-400 text-white/90 hover:text-white transition-colors duration-300">About</Link>
+            <Link to="/services" onClick={toggleMenu} className="hover:text-orange-400 text-white/90 hover:text-white transition-colors duration-300">Services</Link>
+            <Link to="/gallery" onClick={toggleMenu} className="hover:text-orange-400 text-white/90 hover:text-white transition-colors duration-300">Gallery</Link>
+            <Link to="/contact Us" onClick={toggleMenu} className="hover:text-orange-400 text-white/90 hover:text-white transition-colors duration-300">Contact Us</Link>
+            <Link to="/map" onClick={toggleMenu} className="hover:text-orange-400 text-white/90 hover:text-white transition-colors duration-300">Map</Link>
           </div>
         )}
       </nav>
