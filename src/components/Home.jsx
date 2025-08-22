@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import { Link } from 'react-router-dom';
+import ContentHighlighter from './ContentHighlighter';
 const API_URL = 'https://sahasra-backend.onrender.com' || 'http://localhost:5000';
 
 
@@ -58,11 +59,9 @@ const Home = () => {
     <div className="min-h-screen">
       <Toaster position="top-center" reverseOrder={false} />
 
-      {/* 🖼️ Hero Slider Section */}
-      <section className="relative h-80 md:h-150  pt-20 md:pt-20 mb-10">
-        <HeroSlider />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
+      {/* 🎯 Content Highlighter Section */}
+      <section className="relative pt-20 md:pt-20 mb-10">
+        <ContentHighlighter />
       </section>
 
       {/* Company Promo Video Section */}
@@ -357,18 +356,39 @@ const Home = () => {
               <div className="absolute bottom-20 left-10 w-16 h-16 bg-blue-200 rounded-full opacity-60 animate-pulse delay-1000"></div>
               <div className="absolute top-1/2 left-5 w-12 h-12 bg-green-200 rounded-full opacity-60 animate-pulse delay-500"></div>
               
-              {/* Stats Cards */}
-              <div className="absolute -bottom-8 -left-8 bg-white rounded-xl shadow-lg p-4 border border-orange-100">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-orange-500">100+</div>
-                  <div className="text-sm text-slate-600">Happy Clients</div>
+              {/* Modern Stats Cards */}
+              <div className="absolute -bottom-8 -left-8 group">
+                <div className="bg-gradient-to-br from-orange-400/20 via-orange-500/10 to-orange-600/20 backdrop-blur-lg rounded-2xl shadow-2xl p-6 border border-orange-300/20 hover:border-orange-300/40 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-white bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">100+</div>
+                      <div className="text-sm text-orange-200/80 font-medium">Happy Clients</div>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-400/5 to-orange-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
               
-              <div className="absolute -top-8 -right-8 bg-white rounded-xl shadow-lg p-4 border border-blue-100">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-500">120+</div>
-                  <div className="text-sm text-slate-600">Projects Completed</div>
+              <div className="absolute -top-8 -right-8 group">
+                <div className="bg-gradient-to-br from-green-400/20 via-green-500/10 to-green-600/20 backdrop-blur-lg rounded-2xl shadow-2xl p-6 border border-green-300/20 hover:border-green-300/40 transition-all duration-300 hover:scale-105 hover:-translate-y-1">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                      <svg className="w-6 h-6 text-white relative z-10" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-50"></div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-white bg-gradient-to-r from-green-300 to-green-100 bg-clip-text text-transparent">120+</div>
+                      <div className="text-sm text-green-200/80 font-medium">Projects Completed</div>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-400/5 to-green-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
             </div>

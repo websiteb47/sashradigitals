@@ -13,7 +13,7 @@ const Butterfly = () => {
   };
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-40 hidden md:block">
+    <div className="fixed inset-0 pointer-events-none z-40">
       {showImg ? (
         <img
           src="/images/butterfly.png"
