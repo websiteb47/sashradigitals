@@ -38,7 +38,7 @@ function App() {
     <div className="bg-gradient-to-b from-slate-900 to-black min-h-screen text-white">
       <Butterfly />
       {/* Fixed Header */}
-      <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-8 md:px-20 py-4 transition-all duration-300 ${scrolled ? 'bg-purple-900/80 backdrop-blur-md shadow-lg border-b border-purple-400/20' : 'bg-gradient-to-r from-slate-900 via-purple-900 to-slate-800 shadow-2xl backdrop-blur-md border-b border-white/10'}`}>
+      <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-8 md:px-20 py-4 transition-all duration-300 ${scrolled ? 'bg-purple-900/40 backdrop-blur-md shadow-lg border-b border-purple-400/20' : 'bg-gradient-to-r from-slate-900 via-purple-900 to-slate-800 shadow-2xl backdrop-blur-md border-b border-white/10'}`}>
         {/* Logo */}
         <div className="flex flex-row items-center space-x-4 flex-shrink-0">
           <Link to="/" className="flex items-center space-x-4">
@@ -56,12 +56,12 @@ function App() {
         {/* Desktop Menu - Centered */}
         <div className="hidden md:flex flex-1 justify-center">
           <div className="flex space-x-12">
-            <Link to="/" className="text-xl hover:text-orange-400 font-bold text-white/90 hover:text-white transition-colors duration-300">Home</Link>
-            <Link to="/about" className="text-xl hover:text-orange-400 font-bold text-white/90 hover:text-white transition-colors duration-300">About Us</Link>
-            <Link to="/services" className="text-xl hover:text-orange-400 font-bold text-white/90 hover:text-white transition-colors duration-300">Services</Link>
-            <Link to="/gallery" className="text-xl hover:text-orange-400 font-bold text-white/90 hover:text-white transition-colors duration-300">Gallery</Link>
-            <Link to="/contact Us" className="text-xl hover:text-orange-400 font-bold text-white/90 hover:text-white transition-colors duration-300">Contact Us</Link>
-            <Link to="/map" className="text-xl hover:text-orange-400 font-bold text-white/90 hover:text-white transition-colors duration-300">Map</Link>
+            <Link to="/" className="text-xl font-bold text-white/90 hover:text-orange-400 transition-colors duration-300">Home</Link>
+            <Link to="/about" className="text-xl font-bold text-white/90 hover:text-orange-400 transition-colors duration-300">About Us</Link>
+            <Link to="/services" className="text-xl font-bold text-white/90 hover:text-orange-400 transition-colors duration-300">Services</Link>
+            <Link to="/gallery" className="text-xl font-bold text-white/90 hover:text-orange-400 transition-colors duration-300">Gallery</Link>
+            <Link to="/contact Us" className="text-xl font-bold text-white/90 hover:text-orange-400 transition-colors duration-300">Contact Us</Link>
+            <Link to="/map" className="text-xl font-bold text-white/90 hover:text-orange-400 transition-colors duration-300">Map</Link>
           </div>
         </div>
         {/* Mobile Toggle Button */}
@@ -72,13 +72,13 @@ function App() {
         </div>
         {/* Mobile Menu */}
         {isOpen && (
-          <div className={`absolute top-full left-0 w-full flex flex-col items-start p-4 space-y-4 md:hidden z-50 border-t transition-all duration-300 ${scrolled ? 'bg-purple-900/90 backdrop-blur-md border-purple-400/20' : 'bg-gradient-to-r from-slate-900 via-purple-900 to-slate-800 border-white/10'}`}>
-            <Link to="/" onClick={toggleMenu} className="hover:text-orange-400 text-white/90 hover:text-white transition-colors duration-300">Home</Link>
-            <Link to="/about" onClick={toggleMenu} className="hover:text-orange-400 text-white/90 hover:text-white transition-colors duration-300">About</Link>
-            <Link to="/services" onClick={toggleMenu} className="hover:text-orange-400 text-white/90 hover:text-white transition-colors duration-300">Services</Link>
-            <Link to="/gallery" onClick={toggleMenu} className="hover:text-orange-400 text-white/90 hover:text-white transition-colors duration-300">Gallery</Link>
-            <Link to="/contact Us" onClick={toggleMenu} className="hover:text-orange-400 text-white/90 hover:text-white transition-colors duration-300">Contact Us</Link>
-            <Link to="/map" onClick={toggleMenu} className="hover:text-orange-400 text-white/90 hover:text-white transition-colors duration-300">Map</Link>
+          <div className={`absolute top-full left-0 w-full flex flex-col items-start p-4 space-y-4 md:hidden z-50 border-t transition-all duration-300 ${scrolled ? 'bg-purple-900/50 backdrop-blur-md border-purple-400/20' : 'bg-gradient-to-r from-slate-900 via-purple-900 to-slate-800 border-white/10'}`}>
+            <Link to="/" onClick={toggleMenu} className="text-white/90 hover:text-orange-400 transition-colors duration-300">Home</Link>
+            <Link to="/about" onClick={toggleMenu} className="text-white/90 hover:text-orange-400 transition-colors duration-300">About</Link>
+            <Link to="/services" onClick={toggleMenu} className="text-white/90 hover:text-orange-400 transition-colors duration-300">Services</Link>
+            <Link to="/gallery" onClick={toggleMenu} className="text-white/90 hover:text-orange-400 transition-colors duration-300">Gallery</Link>
+            <Link to="/contact Us" onClick={toggleMenu} className="text-white/90 hover:text-orange-400 transition-colors duration-300">Contact Us</Link>
+            <Link to="/map" onClick={toggleMenu} className="text-white/90 hover:text-orange-400 transition-colors duration-300">Map</Link>
           </div>
         )}
       </nav>
@@ -131,7 +131,7 @@ function App() {
                 Your trusted partner in building a strong online presence. We specialize in result-driven digital marketing solutions designed to grow your brand, attract the right audience, and drive conversions.
               </p>
               <div className="flex space-x-4">
-                <a href="https://www.facebook.com/profile.php?id=61563348611003" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-orange-600 transition">
+                <a href="https://www.facebook.com/profile.php?id=61563348611003" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition">
                   <svg className="w-5 h-5 text-white" fill="blue" viewBox="0 0 24 24">
                     <path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0" />
                   </svg>
@@ -147,7 +147,7 @@ function App() {
                   </svg>
                 </a> */}
 
-                <a href="https://www.instagram.com/sahasra_digitals/?next=%2F" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-orange-600 transition">
+                <a href="https://www.instagram.com/sahasra_digitals/?next=%2F" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition">
                   <svg className="w-5 h-5 text-white" fill="red" viewBox="0 0 24 24">
                     <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 3.5zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 2.25a5.25 5.25 0 1 1-5.25 5.25a5.25 5.25 0 0 1 5.25-5.25zm0 1.5a3.75 3.75 0 1 0 3.75 3.75a3.75 3.75 0 0 0-3.75-3.75zm5.25 1.25a1 1 0 1 1-2 0a1 1 0 0 1 2 0z" />
                   </svg>
@@ -157,7 +157,7 @@ function App() {
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.026-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z" />
                   </svg>
                 </a>
-                <a href="https://www.google.com/search?q=SAHASRA+DIGITALS+GUNTUR&oq=sahas&gs_lcrp=EgZjaHJvbWUqCAgBEEUYJxg7MggIABBFGCcYOzIICAEQRRgnGDsyBggCEEUYQDIGCAMQRRg5MgoIBBAAGLEDGIAEMgoIBRAuGLEDGIAEMgcIBhAuGIAEMgcIBxAuGIAE0gEJMzExOGowajE1qAIIsAIB8QWBvA1pz09V7Q&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-orange-600 transition">
+                <a href="https://www.google.com/search?q=SAHASRA+DIGITALS+GUNTUR&oq=sahas&gs_lcrp=EgZjaHJvbWUqCAgBEEUYJxg7MggIABBFGCcYOzIICAEQRRgnGDsyBggCEEUYQDIGCAMQRRg5MgoIBBAAGLEDGIAEMgoIBRAuGLEDGIAEMgcIBhAuGIAEMgcIBxAuGIAE0gEJMzExOGowajE1qAIIsAIB8QWBvA1pz09V7Q&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition">
                   <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
                   </svg>

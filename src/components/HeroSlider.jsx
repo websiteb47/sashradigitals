@@ -30,7 +30,7 @@ const HeroSlider = () => {
         }}
         slidesPerView={1}
         spaceBetween={0}
-        className="absolute inset-0 z-0 h-96 md:h-[500px] w-full"
+        className="absolute inset-0 z-0 h-64 md:h-[350px] w-full"
       >
         {slides.map((src, index) => (
           <SwiperSlide key={index}>

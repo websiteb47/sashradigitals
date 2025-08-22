@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const ContentHighlighter = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [swiper, setSwiper] = useState(null);
 
   const contentSlides = [
     {
       background: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1600&auto=format&fit=crop',
-      title: 'Digital Marketing Excellence',
-      subtitle: 'Data-driven strategies that deliver results',
-      icon: '📊',
+      title: 'Sahasra Digitals',
+      subtitle: 'We Care and Promote Your Business',
+      font: 'font-bold',
       color: 'from-blue-500/20 to-purple-600/20'
     },
     {
@@ -30,6 +32,13 @@ const ContentHighlighter = () => {
       color: 'from-orange-500/20 to-red-600/20'
     },
     {
+      background: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1600&auto=format&fit=crop',
+      title: 'Digital Marketing Excellence',
+      subtitle: 'Data-driven strategies that deliver results',
+      icon: '📊',
+      color: 'from-blue-500/20 to-purple-600/20'
+    },
+    {
       background: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1600&auto=format&fit=crop',
       title: 'Creative Design Solutions',
       subtitle: 'Beautiful designs that tell your story',
@@ -39,15 +48,16 @@ const ContentHighlighter = () => {
   ];
 
   return (
-    <div className="relative w-full h-96 md:h-[500px] overflow-hidden">
+    <div className="relative w-full h-[550px] md:h-[58 0px] overflow-hidden">
       <Swiper
-        modules={[Autoplay, Pagination]}
+        modules={[Autoplay, Pagination, Navigation]}
         loop={true}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         slidesPerView={1}
         spaceBetween={0}
         onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
+        onSwiper={setSwiper}
         className="w-full h-full"
       >
         {contentSlides.map((slide, index) => (
@@ -69,10 +79,17 @@ const ContentHighlighter = () => {
                 <div className="text-6xl md:text-8xl mb-6 animate-bounce">
                   {slide.icon}
                 </div>
-                <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
-                  {slide.title}
+                <h2 className={`${slide.title === 'Sahasra Digitals' ? 'text-5xl md:text-9xl' : 'text-3xl md:text-5xl'} font-bold text-white mb-4 drop-shadow-lg`}>
+                  {slide.title === 'Sahasra Digitals' ? (
+                    <>
+                      <span className="text-orange-400">S</span>ahasra{' '}
+                      <span className="text-orange-400">D</span>igitals
+                    </>
+                  ) : (
+                    slide.title
+                  )}
                 </h2>
-                <p className="text-lg md:text-xl text-white/90 max-w-2xl drop-shadow-md">
+                <p className={`${slide.title === 'Sahasra Digitals' ? 'text-xl md:text-xl font-bold' : 'text-lg md:text-xl'} text-white/90 max-w-2xl drop-shadow-md`}>
                   {slide.subtitle}
                 </p>
                 
@@ -87,6 +104,27 @@ const ContentHighlighter = () => {
         ))}
       </Swiper>
       
+      {/* Custom Navigation Buttons */}
+      <button
+        onClick={() => swiper && swiper.slidePrev()}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+        aria-label="Previous slide"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      
+      <button
+        onClick={() => swiper && swiper.slideNext()}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+        aria-label="Next slide"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
       {/* Custom Pagination */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
         {contentSlides.map((_, index) => (
@@ -98,7 +136,6 @@ const ContentHighlighter = () => {
                 : 'bg-white/50 hover:bg-white/75'
             }`}
             onClick={() => {
-              const swiper = document.querySelector('.swiper')?.swiper;
               if (swiper) swiper.slideTo(index);
             }}
           />

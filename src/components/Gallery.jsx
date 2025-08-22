@@ -2,7 +2,7 @@ import React from 'react';
 
 const Gallery = () => {
   return (
-    <section className="bg-slate-100 w-full px-0 min-h-screen">
+    <section className="bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100 w-full px-0 min-h-screen">
       <div className="w-full mx-auto px-4 md:px-20 py-16">
         <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-4 text-center">Gallery</h2>
         <p className="text-lg text-gray-700 mb-10 text-center max-w-2xl mx-auto">
@@ -42,7 +42,7 @@ const Gallery = () => {
                   </div>
                 </div>
               </div>
-              <h4 className="text-xl font-bold text-purple-700 mb-2">Digital Marketing Certification</h4>
+              <h4 className="text-xl font-bold text-pink-700 mb-2">Digital Marketing Certification</h4>
               <p className="text-gray-600 text-sm">Recognized expertise in modern digital marketing strategies and techniques.</p>
             </div>
             

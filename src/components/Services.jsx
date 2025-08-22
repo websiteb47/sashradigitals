@@ -5,16 +5,16 @@ const Services = () => (
   <section className="bg-slate-100 w-full px-0 min-h-screen py-16">
     <div className="w-full mx-auto px-4 md:px-10">
       <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-4 text-center font-heading">Our Services</h2>
-      <p className="text-lg text-gray-700 mb-10 text-center max-w-3xl mx-auto">
+      <p className="text-lg text-gray-700 font-bold mb-10 text-center max-w-3xl mx-auto">
         At Sahasra Digitals, we offer a comprehensive suite of creative and digital solutions to help your business stand out, connect with your audience, and grow effectively. From branding and design to marketing and technology, our expert team delivers results that matter.
       </p>
       
       {/* Digital Marketing Services */}
       <div className="mb-12">
-        <h3 className="text-2xl font-bold text-orange-400 mb-6 text-center">Digital Marketing Services</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <h3 className="text-2xl font-bold text-orange-600 mb-6 text-center">Digital Marketing Services</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {/* 1. Social Media Marketing & Handling */}
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 hover:scale-105 hover:-translate-y-2">
             <div className="w-full mb-4 shadow-lg transition">
               <img
                 src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop"
@@ -37,7 +37,7 @@ const Services = () => (
           </div>
           
           {/* 2. SEO Consultancy */}
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 hover:scale-105 hover:-translate-y-2">
             <div className="w-full mb-4 shadow-lg transition">
               <img
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
@@ -60,7 +60,7 @@ const Services = () => (
           </div>
           
           {/* 3. Google Sponsored Ads */}
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 hover:scale-105 hover:-translate-y-2">
             <div className="w-full mb-4 shadow-lg transition">
               <img
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
@@ -83,7 +83,7 @@ const Services = () => (
           </div>
           
           {/* 4. Market Analysis */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 hover:scale-105 hover:-translate-y-2">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
                 src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=800&auto=format&fit=crop"
@@ -106,7 +106,7 @@ const Services = () => (
           </div>
           
           {/* 5. Keyword Research */}
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 hover:scale-105 hover:-translate-y-2">
             <div className="w-full mb-4 shadow-lg transition">
               <img
                 src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop"
@@ -132,10 +132,10 @@ const Services = () => (
 
       {/* Creative Design Services */}
       <div className="mb-12">
-        <h3 className="text-2xl font-bold text-orange-400 mb-6 text-center">Creative Design Services</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <h3 className="text-2xl font-bold text-red-600 mb-6 text-center">Creative Design Services</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {/* 6. Video Editing & Promotional Videos */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 hover:scale-105 hover:-translate-y-2">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
                 src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=800&auto=format&fit=crop"
@@ -158,7 +158,7 @@ const Services = () => (
           </div>
           
           {/* 7. Brochure, Poster & Banner Design */}
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 hover:scale-105 hover:-translate-y-2">
             <div className="w-full mb-4 shadow-lg transition">
               <img
                 src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=800&auto=format&fit=crop"
@@ -181,7 +181,7 @@ const Services = () => (
           </div>
           
           {/* 8. Logo & Business Card Designing */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 hover:scale-105 hover:-translate-y-2">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
                 src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
@@ -204,7 +204,7 @@ const Services = () => (
             </div>
           
           {/* 9. Photo Editing & Album Designing */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 hover:scale-105 hover:-translate-y-2">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
                 src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=800&auto=format&fit=crop"
@@ -227,7 +227,7 @@ const Services = () => (
           </div>
           
           {/* 10. Digital Printing Solutions */}
-          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100">
+          <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 hover:scale-105 hover:-translate-y-2">
             <div className="w-full mb-4 shadow-lg transition">
               <img
                 src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=800&auto=format&fit=crop"
@@ -251,10 +251,10 @@ const Services = () => (
         </div>
       </div>
 
-      {/* Call to Action */}
-      <div className="text-center bg-white rounded-2xl shadow-lg p-8">
-        <h3 className="text-2xl font-bold text-orange-500 mb-4">Ready to Get Started?</h3>
-        <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+              {/* Call to Action */}
+        <div className="text-center bg-green-200 rounded-2xl shadow-lg p-8">
+        <h3 className="text-2xl font-bold text-pink-500 mb-4">Ready to Get Started?</h3>
+        <p className="text-gray-700 font-bold mb-6 max-w-2xl mx-auto">
           Let's discuss your project requirements and create a customized solution that fits your business needs and budget.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -262,11 +262,11 @@ const Services = () => (
             href="https://wa.me/9581823990"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors duration-300"
+            className="inline-block bg-green-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-green-600 transition-colors duration-300"
           >
             Chat on WhatsApp
           </a>
-          <Link to="/contact Us" className="inline-block border-2 border-orange-500 text-orange-500 px-8 py-3 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-colors duration-300">
+          <Link to="/contact Us" className="inline-block border-2 border-orange-500 text-orange-500 px-8 py-3 rounded-lg font-bold hover:bg-orange-500 hover:text-white transition-colors duration-300">
             Contact Us
           </Link>
         </div>

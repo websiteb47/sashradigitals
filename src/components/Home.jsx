@@ -173,10 +173,10 @@ const Home = () => {
               <h3 className="text-xl md:text-2xl font-heading font-bold mb-4 text-orange-500 tracking-wide">Basic Plan</h3>
               <p className="font-heading font-semibold text-xl md:text-2xl text-orange-500 mb-6">₹8,000<span className="text-base font-normal text-gray-500">/30 days</span></p>
               <ul className="text-gray-600 mb-2 space-y-3 text-left font-sans text-base md:text-lg w-full pl-2">
-                <li className="flex items-start gap-2"><span className="mt-1 text-orange-400">✔</span>10 Graphic Designs & 2 Reels</li>
-                <li className="flex items-start gap-2"><span className="mt-1 text-orange-400">✔</span>Maintenance of pages: Facebook, Insta, Twitter, Google</li>
-                <li className="flex items-start gap-2"><span className="mt-1 text-orange-400">✔</span>Special days for Festivals</li>
-                <li className="flex items-start gap-2"><span className="mt-1 text-orange-400">✔</span>Guidance Related Competitor Research</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-orange-400">✔</span><span className="font-bold">10 Graphic Designs & 2 Reels</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-orange-400">✔</span><span className="font-bold">Maintenance of pages: Facebook, Insta, Twitter, Google</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-orange-400">✔</span><span className="font-bold">Special days for Festivals</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-orange-400">✔</span><span className="font-bold">Guidance Related Competitor Research</span></li>
               </ul>
             </div>
             {/* Business Plan */}
@@ -184,9 +184,9 @@ const Home = () => {
               <h3 className="text-xl md:text-2xl font-heading font-bold mb-4 text-blue-600 tracking-wide">Business Plan</h3>
               <p className="font-heading font-semibold text-xl md:text-2xl text-blue-600 mb-6">₹12,000<span className="text-base font-normal text-gray-500">/30 days</span></p>
               <ul className="text-gray-600 mb-2 space-y-3 text-left font-sans text-base md:text-lg w-full pl-2">
-                <li className="flex items-start gap-2"><span className="mt-1 text-blue-400">✔</span>All Basic Plan Services</li>
-                <li className="flex items-start gap-2"><span className="mt-1 text-blue-400">✔</span>Sponsored Ads in Facebook & Instagram</li>
-                <li className="flex items-start gap-2"><span className="mt-1 text-blue-400">✔</span>Weekly once Response Strategy with Google Meet</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-blue-400">✔</span><span className="font-bold">All Basic Plan Services</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-blue-400">✔</span><span className="font-bold">Sponsored Ads in Facebook & Instagram</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-blue-400">✔</span><span className="font-bold">Weekly once Response Strategy with Google Meet</span></li>
               </ul>
             </div>
             {/* Professional Plan (Most Popular) */}
@@ -195,10 +195,10 @@ const Home = () => {
               <h3 className="text-xl md:text-2xl font-heading font-bold mb-4 text-purple-700 tracking-wide">Professional Plan</h3>
               <p className="font-heading font-semibold text-xl md:text-2xl text-purple-700 mb-6">₹18,000<span className="text-base font-normal text-gray-500">/30 days</span></p>
               <ul className="text-gray-600 mb-2 space-y-3 text-left font-sans text-base md:text-lg w-full pl-2">
-                <li className="flex items-start gap-2"><span className="mt-1 text-purple-400">✔</span>All Standard Plan Services (Basic + Business)</li>
-                <li className="flex items-start gap-2"><span className="mt-1 text-purple-400">✔</span>Premium GMB Optimization with local SEO</li>
-                <li className="flex items-start gap-2"><span className="mt-1 text-purple-400">✔</span>Campaigns & Sponsorship in Facebook, Instagram & Google</li>
-                <li className="flex items-start gap-2"><span className="mt-1 text-purple-400">✔</span>Monthly once WhatsApp Campaign with client data
+                <li className="flex items-start gap-2"><span className="mt-1 text-purple-400">✔</span><span className="font-bold">All Standard Plan Services (Basic + Business)</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-purple-400">✔</span><span className="font-bold">Premium GMB Optimization with local SEO</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-purple-400">✔</span><span className="font-bold">Campaigns & Sponsorship in Facebook, Instagram & Google</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-purple-400">✔</span><span className="font-bold">Monthly once WhatsApp Campaign with client data</span>
                   <a href="https://wa.me/9581823990" target="_blank" rel="noopener noreferrer" className="ml-2">
                     <svg className="w-5 h-5 text-green-500 inline" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.16 1.6 5.97L0 24l6.18-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22c-1.85 0-3.63-.5-5.18-1.44l-.37-.22-3.67.96.98-3.58-.24-.37A9.94 9.94 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.13-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.28-.32.42-.48.14-.16.19-.27.28-.45.09-.18.05-.34-.02-.47-.07-.13-.61-1.47-.83-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.47.07-.72.34-.25.27-.94.92-.94 2.24 0 1.32.96 2.59 1.09 2.77.14.18 1.89 2.89 4.59 3.94.64.22 1.14.35 1.53.45.64.16 1.23.14 1.7.08.52-.06 1.6-.66 1.83-1.29.23-.63.23-1.18.16-1.29-.07-.11-.25-.18-.52-.32z" />
@@ -212,11 +212,11 @@ const Home = () => {
               <h3 className="text-xl md:text-2xl font-heading font-bold mb-4 text-emerald-600 tracking-wide">Premium Plan (Ads)</h3>
               <p className="font-heading font-semibold text-xl md:text-2xl text-emerald-600 mb-6">₹26,000<span className="text-base font-normal text-gray-500">/30 days</span></p>
               <ul className="text-gray-600 mb-2 space-y-3 text-left font-sans text-base md:text-lg w-full pl-2">
-                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Professional Plan (Basic + Business + Professional)</li>
-                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Facebook Ads, Instagram Ads, Google Ads & YouTube Ads, WhatsApp Ads</li>
-                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Pinterest & LinkedIn Pages</li>
-                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Reviews Management</li>
-                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span>Customer Support</li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span><span className="font-bold">Professional Plan (Basic + Business + Professional)</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span><span className="font-bold">Facebook Ads, Instagram Ads, Google Ads & YouTube Ads, WhatsApp Ads</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span><span className="font-bold">Pinterest & LinkedIn Pages</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span><span className="font-bold">Reviews Management</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 text-emerald-400">✔</span><span className="font-bold">Customer Support</span></li>
               </ul>
             </div>
           </div>
@@ -233,13 +233,13 @@ const Home = () => {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 px-4 md:px-10 relative z-10">
           {/* Illustration/Icon */}
           <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-1/3 mb-8 md:mb-0">
-            <img src="/images/about.png" alt="About Sahasra Digitals" className=" border-2 border-[#ddd] rounded-2xl object-cover mx-auto shadow-lg" />
+            <img src="/images/about-new.png.jpg" alt="About Sahasra Digitals" className=" border-2 border-[#ddd] rounded-2xl object-cover mx-auto shadow-lg hover:scale-110 hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300" />
           </div>
           {/* Text Content */}
           <div className="w-full md:w-2/3 text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-orange-400 mb-6">About Us</h2>
-            <p className="text-lg leading-relaxed mb-4 font-semibold text-white">Welcome to Sahasra Digitals</p>
-            <p className="text-lg leading-relaxed mb-6 text-gray-200">
+            <p className="text-2xl leading-relaxed mb-4 font-semibold text-green-500">Welcome to Sahasra Digitals</p>
+            <p className="text-lg leading-relaxed font-bold mb-6 text-gray-200">
               Sahasra Digitals is a full-service digital marketing agency dedicated to helping businesses grow in the digital landscape. Established in 2024, we provide affordable, effective, and transparent online marketing solutions for small and medium businesses, startups, and enterprises.
             </p>
             <p className="text-lg leading-relaxed mb-6 text-gray-200">
@@ -267,7 +267,7 @@ const Home = () => {
         <div className="max-w-6xl mx-auto px-4 md:px-10 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white-500 mb-4">
               Why Choose <span className="text-orange-400">Sahasra Digitals</span>?
             </h2>
             <p className="text-lg text-gray-200 max-w-2xl mx-auto">
@@ -287,7 +287,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Expert Team, Proven Success</h3>
+                  <h3 className="text-xl font-bold text-orange-400 mb-2">Expert Team, Proven Success</h3>
                   <p className="text-gray-200 leading-relaxed">
                     Our experienced professionals bring deep knowledge in digital marketing and design. With a strong portfolio and proven track record, we know what it takes to make your brand shine in the competitive digital landscape.
                   </p>
@@ -302,7 +302,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Cutting-Edge Creativity</h3>
+                  <h3 className="text-xl font-bold text-blue-400 mb-2">Cutting-Edge Creativity</h3>
                   <p className="text-gray-200 leading-relaxed">
                     We stay ahead of the curve using the latest tools, technologies, and industry trends. Our innovative approach ensures your brand gets a modern, competitive edge in today's fast-paced digital world.
                   </p>
@@ -317,7 +317,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Customer-First Approach</h3>
+                  <h3 className="text-xl font-bold text-green-400 mb-2">Customer-First Approach</h3>
                   <p className="text-gray-200 leading-relaxed">
                     At Sahasra Digitals, you're not just a client — you're a partner. We listen, understand, and work closely with you to turn your vision into impactful results that exceed expectations.
                   </p>
@@ -332,7 +332,7 @@ const Home = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Results-Driven Strategy</h3>
+                  <h3 className="text-xl font-bold text-pink-400 mb-2">Results-Driven Strategy</h3>
                   <p className="text-gray-200 leading-relaxed">
                     We don't just create — we deliver measurable results. Our work is driven by data and analytics, aimed at growing your business, building your brand, and boosting your bottom line.
                   </p>
@@ -342,15 +342,6 @@ const Home = () => {
 
             {/* Right Side - Visual Element */}
             <div className="relative opacity-0 translate-x-[100px] animate-fade-in-right">
-              {/* Main Image */}
-              <div className="relative z-10">
-                <img 
-                  src="https://cdn-icons-png.flaticon.com/512/190/190411.png" 
-                  alt="Why Choose Us" 
-                  className="w-full max-w-md mx-auto object-contain drop-shadow-2xl"
-                />
-              </div>
-              
               {/* Background Decorative Elements */}
               <div className="absolute top-10 right-10 w-20 h-20 bg-orange-200 rounded-full opacity-60 animate-pulse"></div>
               <div className="absolute bottom-20 left-10 w-16 h-16 bg-blue-200 rounded-full opacity-60 animate-pulse delay-1000"></div>
@@ -441,29 +432,29 @@ const Home = () => {
               <span className="mb-3 text-blue-500">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
               </span>
-              <h3 className="text-xl font-bold mb-2 text-black">Search Engine Optimization</h3>
-              <p className="text-white-700">Boost your visibility and ranking on search engines.</p>
+              <h3 className="text-xl font-bold mb-2 text-blue-400">Search Engine Optimization</h3>
+              <p className="text-white-700 font-semibold">Boost your visibility and ranking on search engines.</p>
             </div>
             <div className="flex flex-col justify-center items-center md:items-center text-center md:text-center">
               <span className="mb-3 text-green-500">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8h2a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8a2 2 0 012-2h2" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 12v4m0 0l-2-2m2 2l2-2" /></svg>
               </span>
-              <h3 className="text-xl font-bold mb-2 text-black">Social Media Marketing</h3>
-              <p className="text-white-700">Engage your audience and grow your brand online.</p>
+              <h3 className="text-xl font-bold mb-2 text-green-600">Social Media Marketing</h3>
+              <p className="text-white-700 font-semibold">Engage your audience and grow your brand online.</p>
             </div>
             <div className="flex flex-col justify-center items-center md:items-center text-center md:text-center">
-              <span className="mb-3 text-violet-500">
+              <span className="mb-3 text-orange-700">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 17l4 4 4-4m0-5V3a1 1 0 00-1-1H9a1 1 0 00-1 1v9m10 4h.01" /></svg>
               </span>
-              <h3 className="text-xl font-bold mb-2 text-black">Content Marketing</h3>
-              <p className="text-white-700">Create and share valuable content to attract customers.</p>
+              <h3 className="text-xl font-bold mb-2 text-orange-700">Content Marketing</h3>
+              <p className="text-white-700 font-semibold">Create and share valuable content to attract customers.</p>
             </div>
             <div className="flex flex-col justify-center items-center md:items-center text-center md:text-center">
               <span className="mb-3 text-pink-500">
                 <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3" /><circle cx="12" cy="12" r="10" /></svg>
               </span>
-              <h3 className="text-xl font-bold mb-2 text-black">Pay-Per-Click</h3>
-              <p className="text-white-700">Drive targeted traffic with effective PPC campaigns.</p>
+              <h3 className="text-xl font-bold mb-2 text-pink-600">Pay-Per-Click</h3>
+              <p className="text-white-700 font-semibold">Drive targeted traffic with effective PPC campaigns.</p>
             </div>
           </div>
         </div>
@@ -480,7 +471,7 @@ const Home = () => {
                       <h2 className="text-3xl md:text-4xl font-bold text-orange-400 mb-10 text-center">Our Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {/* 1. Social Media Marketing & Handling */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100 h-full">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 h-full hover:scale-105 hover:-translate-y-2">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
                   src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop"
@@ -504,7 +495,7 @@ const Home = () => {
               </div>
             </div>
             {/* 2. SEO Consultancy */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100 h-full">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 h-full hover:scale-105 hover:-translate-y-2">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
@@ -528,7 +519,7 @@ const Home = () => {
               </div>
             </div>
             {/* 3. Video Editing & Promotional Videos */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100 h-full">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 h-full hover:scale-105 hover:-translate-y-2">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
                   src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=800&auto=format&fit=crop"
@@ -552,7 +543,7 @@ const Home = () => {
               </div>
             </div>
             {/* 4. Logo & Business Card Designing */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-shadow duration-300 flex flex-col items-center text-center group border border-orange-100 h-full">
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-orange-300 transition-all duration-300 flex flex-col items-center text-center group border border-orange-100 h-full hover:scale-105 hover:-translate-y-2">
               <div className="w-full mb-4 shadow-lg transition">
                 <img
                   src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"

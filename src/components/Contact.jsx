@@ -42,11 +42,11 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-slate-100 w-full min-h-screen px-0 py-16">
+    <section className="bg-gradient-to-br from-orange-50 via-yellow-50 to-pink-50 w-full min-h-screen px-0 py-16">
       <Toaster position="top-center" reverseOrder={false} />
       <div className="max-w-5xl mx-auto px-4 md:px-20">
         <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-6 font-heading">Contact Us</h2>
-        <p className="text-lg text-gray-700 mb-8">
+        <p className="text-lg font-bold text-gray-700 mb-8" style={{fontWeight: '700'}}>
           We'd love to hear from you! Whether you have questions about our services, need a custom quote, or just want to say hello — feel free to reach out.
         </p>
         <div className="grid md:grid-cols-2 gap-12">
@@ -122,23 +122,23 @@ const Contact = () => {
           <div className="space-y-6 text-black">
             <div>
               <h3 className="text-xl font-semibold text-orange-400 mb-1 font-heading">Email</h3>
-              <a href="mailto:sahasradigitals919@gmail.com" className="text-gray-700 hover:text-orange-500 transition">sahasradigitals919@gmail.com</a>
+              <a href="mailto:sahasradigitals919@gmail.com" className="text-gray-700 font-bold hover:text-orange-500 transition" style={{fontWeight: '700'}}>sahasradigitals919@gmail.com</a>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-orange-400 mb-1 font-heading">Phone</h3>
-              <a href="tel:+917893940717" className="text-gray-700 hover:text-orange-500 transition">+91 78939 40717</a>
+              <a href="tel:+917893940717" className="text-gray-700 font-bold hover:text-orange-500 transition" style={{fontWeight: '700'}}>+91 78939 40717</a>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-orange-400 mb-1 font-heading">Address</h3>
-              <p className="text-gray-700">
+              <p className="text-gray-700 font-bold" style={{fontWeight: '700'}}>
                 6-17-43, 17/3, Arundelpet,<br />
                 Guntur, Andhra Pradesh - 522002.
               </p>
             </div>
             <div>
               <h3 className="text-xl font-semibold text-orange-400 mb-1 font-heading">Business Hours</h3>
-              <p className="text-gray-700">Monday - Saturday: 9 AM to 6 PM</p>
-              <p className="text-gray-700">Sunday: Closed</p>
+              <p className="text-gray-700 font-bold" style={{fontWeight: '700'}}>Monday - Saturday: 9 AM to 6 PM</p>
+              <p className="text-gray-700 font-bold" style={{fontWeight: '700'}}>Sunday: Closed</p>
             </div>
           </div>
         </div>

@@ -3,19 +3,19 @@
 import React from 'react';
 
 const About = () => (
-  <section className="bg-orange-50 w-full py-16 min-h-screen">
+  <section className="bg-gradient-to-br from-orange-50 via-pink-50 to-orange-100 w-full py-16 min-h-screen">
     <div className="max-w-4xl mx-auto px-4 md:px-0">
       {/* Hero Section */}
       <div className="text-center mb-12">
-        <img src="/images/about.png" alt="About Sahasra Digitals" className="w-60 h-60 border-2 border-orange-500 rounded-full object-cover mx-auto mb-6" />
+        <img src="/images/about-new.png.jpg" alt="About Sahasra Digitals" className="w-60 h-60 border-2 border-orange-500 rounded-full object-cover mx-auto mb-6 hover:scale-110 hover:shadow-2xl hover:shadow-orange-500/50 transition-all duration-300" />
         <h2 className="text-3xl md:text-4xl font-bold text-orange-500 mb-6">About Us</h2>
-        <p className="text-xl font-semibold text-black mb-4">Welcome to Sahasra Digitals</p>
+        {/* <p className="text-xl font-semibold text-black mb-4">Welcome to Sahasra Digitals</p> */}
       </div>
 
       {/* Company Overview */}
-      <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-        <h3 className="text-2xl font-bold text-orange-400 mb-4 text-center">Our Story</h3>
-        <p className="text-lg text-black leading-relaxed mb-4">
+      <div className="bg-white rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
+        <h3 className="text-2xl font-bold text-orange-600 mb-4 text-center">Our Story</h3>
+        <p className="text-lg text-black font-bold leading-relaxed mb-4">
           Sahasra Digitals is a full-service digital marketing agency dedicated to helping businesses grow in the digital landscape. Established in 2024, Sahasra Digitals was built on the vision of providing affordable, effective, and transparent online marketing solutions for small and medium businesses (SMBs), startups, and enterprises.
         </p>
         <p className="text-lg text-white-700 leading-relaxed">
@@ -24,33 +24,33 @@ const About = () => (
       </div>
 
       {/* Founder Section */}
-      <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-        <h3 className="text-2xl font-bold text-orange-400 mb-4 text-center">Meet Our Founder</h3>
+      <div className="bg-white rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
+        <h3 className="text-2xl font-bold text-orange-600 mb-4 text-center">Meet Our Founder</h3>
         <div className="text-center">
-          <h4 className="text-orange-500 font-bold text-2xl mb-4">Mrs. Surekha Ramarao Pothakamuri</h4>
-          <p className="text-lg text-black leading-relaxed mb-4">
+          <h4 className="text-green-500 font-bold text-2xl mb-4">Mrs. Surekha Ramarao Pothakamuri</h4>
+          <p className="text-lg text-black font-bold leading-relaxed mb-4">
             The founder and CEO of Sahasra Digitals is a seasoned digital strategist with over 5 years of experience in marketing, branding, and technology. Before starting Sahasra Digitals, she worked with several digital marketing agencies, helping brands scale their online presence.
           </p>
-          <p className="text-lg text-black leading-relaxed mb-4">
+          <p className="text-lg text-black font-bold leading-relaxed mb-4">
             Currently working as a Private School Teacher, Mrs. Surekha holds a Bachelor's Degree from Acharya Nagarjuna University. She has received extensive training in Facebook and Instagram ads and has earned multiple certificates in digital marketing.
           </p>
-          <p className="text-lg text-black leading-relaxed">
+          <p className="text-lg text-black font-bold leading-relaxed">
             She is skilled in all types of Social Media Marketing & Ads Strategies, GMB Profile Optimization, Local SEO, and Creative Content Marketing Strategies.
           </p>
         </div>
       </div>
 
       {/* Our Mission */}
-      <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-        <h3 className="text-2xl font-bold text-orange-400 mb-4 text-center">Our Mission</h3>
-        <p className="text-lg text-black text-center leading-relaxed">
+      <div className="bg-white rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
+        <h3 className="text-2xl font-bold text-orange-600 mb-4 text-center">Our Mission</h3>
+        <p className="text-lg text-black font-bold text-center leading-relaxed">
           To provide creative and quality-driven digital services to every customer with passion and perfection. With a focus on innovation and visual excellence, Sahasra Digitals is your trusted partner in your digital journey. 
-          <span className="font-semibold block mt-2">Let your brand speak with design – Only at Sahasra Digitals!</span>
+          <span className="font-semibold block text-blue-600 mt-2">Let your brand speak with design – Only at Sahasra Digitals!</span>
         </p>
       </div>
 
       {/* Our Services Include */}
-      <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <div className="bg-white rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
         <h3 className="text-2xl font-bold text-orange-400 mb-4 text-center">Our Services Include</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ul className="list-disc ml-6 text-lg text-black space-y-2">
@@ -69,7 +69,7 @@ const About = () => (
       </div>
 
       {/* Why Choose Us */}
-      <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <div className="bg-white rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
         <h3 className="text-2xl font-bold text-orange-400 mb-4 text-center">Why Choose Us?</h3>
         <div className="space-y-6">
           <div className="flex items-start gap-4">
@@ -123,7 +123,7 @@ const About = () => (
       </div>
 
       {/* Our Expertise */}
-      <div className="bg-white rounded-xl shadow-lg p-8">
+      <div className="bg-white rounded-3xl shadow-lg p-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
         <h3 className="text-2xl font-bold text-orange-400 mb-6 text-center">Our Expertise</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           <div className="flex flex-col items-center text-center">
