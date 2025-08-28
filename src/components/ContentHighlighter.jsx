@@ -52,8 +52,8 @@ const ContentHighlighter = () => {
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         loop={true}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
-        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        pagination={false}
         slidesPerView={1}
         spaceBetween={0}
         onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
