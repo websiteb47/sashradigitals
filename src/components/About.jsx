@@ -13,18 +13,18 @@ const About = () => (
       </div>
 
       {/* Company Overview */}
-      <div className="bg-white rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
+      <div className="bg-pink-200 rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
         <h3 className="text-2xl font-bold text-orange-600 mb-4 text-center">Our Story</h3>
         <p className="text-lg text-black font-bold leading-relaxed mb-4">
           Sahasra Digitals is a full-service digital marketing agency dedicated to helping businesses grow in the digital landscape. Established in 2024, Sahasra Digitals was built on the vision of providing affordable, effective, and transparent online marketing solutions for small and medium businesses (SMBs), startups, and enterprises.
         </p>
-        <p className="text-lg text-white-700 leading-relaxed">
+        <p className="text-lg text-black font-bold leading-relaxed">
           With a customer-first approach, Sahasra Digitals delivers measurable results by combining creativity, data analytics, and strategic planning. The company offers end-to-end solutions that help businesses establish a strong online presence and achieve their digital marketing goals.
         </p>
       </div>
 
       {/* Founder Section */}
-      <div className="bg-white rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
+      <div className="bg-pink-200 rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
         <h3 className="text-2xl font-bold text-orange-600 mb-4 text-center">Meet Our Founder</h3>
         <div className="text-center">
           <h4 className="text-green-500 font-bold text-2xl mb-4">Mrs. Surekha Ramarao Pothakamuri</h4>
@@ -41,7 +41,7 @@ const About = () => (
       </div>
 
       {/* Our Mission */}
-      <div className="bg-white rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
+      <div className="bg-pink-200 rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
         <h3 className="text-2xl font-bold text-orange-600 mb-4 text-center">Our Mission</h3>
         <p className="text-lg text-black font-bold text-center leading-relaxed">
           To provide creative and quality-driven digital services to every customer with passion and perfection. With a focus on innovation and visual excellence, Sahasra Digitals is your trusted partner in your digital journey. 
@@ -50,7 +50,7 @@ const About = () => (
       </div>
 
       {/* Our Services Include */}
-      <div className="bg-white rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
+      <div className="bg-pink-200 rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
         <h3 className="text-2xl font-bold text-orange-400 mb-4 text-center">Our Services Include</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ul className="list-disc ml-6 text-lg text-black space-y-2">
@@ -69,7 +69,7 @@ const About = () => (
       </div>
 
       {/* Why Choose Us */}
-      <div className="bg-white rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
+      <div className="bg-pink-200 rounded-3xl shadow-lg p-8 mb-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
         <h3 className="text-2xl font-bold text-orange-400 mb-4 text-center">Why Choose Us?</h3>
         <div className="space-y-6">
           <div className="flex items-start gap-4">
@@ -98,32 +98,30 @@ const About = () => (
           <div className="flex items-start gap-4">
             <span className="text-orange-500 mt-1">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3" />
-                <circle cx="12" cy="12" r="10" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </span>
             <div>
               <h4 className="font-semibold text-black mb-1">Customer-First Approach</h4>
-              <p className="text-black">At Sahasra Digitals, you're not just a client — you're a partner. We listen, understand, and work closely with you to turn your vision into impactful results.</p>
+              <p className="text-black">We believe in building long-term relationships with our clients. Our customer-first approach means we listen to your needs, understand your goals, and deliver solutions that exceed your expectations.</p>
             </div>
           </div>
           <div className="flex items-start gap-4">
             <span className="text-orange-500 mt-1">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 9V7a5 5 0 00-10 0v2a5 5 0 0010 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 17v.01" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
             </span>
             <div>
-              <h4 className="font-semibold text-black mb-1">Focused on Real Results</h4>
-              <p className="text-black">We don't just create – we deliver. Our work is driven by results, aimed at growing your business, building your brand, and boosting your bottom line.</p>
+              <h4 className="font-semibold text-black mb-1">Results-Driven Strategy</h4>
+              <p className="text-black">We don't just create beautiful designs; we create strategies that drive results. Our data-driven approach ensures that every campaign and design decision contributes to your business growth and success.</p>
             </div>
           </div>
-      </div>
+        </div>
       </div>
 
       {/* Our Expertise */}
-      <div className="bg-white rounded-3xl shadow-lg p-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
+      <div className="bg-pink-200 rounded-3xl shadow-lg p-8 hover:scale-105 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300">
         <h3 className="text-2xl font-bold text-orange-400 mb-6 text-center">Our Expertise</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           <div className="flex flex-col items-center text-center">
@@ -133,7 +131,7 @@ const About = () => (
               </svg>
             </span>
             <h4 className="font-bold text-black">Search Engine Optimization</h4>
-            <p className="text-white-600 text-sm mt-1">Boost your visibility and ranking</p>
+            <p className="text-blue-900 font-bold text-sm mt-1">Boost your visibility and ranking</p>
           </div>
           <div className="flex flex-col items-center text-center">
             <span className="mb-3 text-green-500">
@@ -143,7 +141,7 @@ const About = () => (
               </svg>
             </span>
             <h4 className="font-bold text-black">Social Media Marketing</h4>
-            <p className="text-white-600 text-sm mt-1">Engage your audience and grow</p>
+            <p className="text-green-900 font-bold text-sm mt-1">Engage your audience and grow</p>
           </div>
           <div className="flex flex-col items-center text-center">
             <span className="mb-3 text-violet-500">
@@ -151,8 +149,8 @@ const About = () => (
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8 17l4 4 4-4m0-5V3a1 1 0 00-1-1H9a1 1 0 00-1 1v9m10 4h.01" />
               </svg>
             </span>
-            <h4 className="font-bold text-black">Content Marketing</h4>
-            <p className="text-white-600 text-sm mt-1">Create valuable content</p>
+            <h4 className="font-bold text-black">Content Marketing Expert</h4>
+            <p className="text-violet-600 font-bold text-sm mt-1">Create valuable content</p>
           </div>
           <div className="flex flex-col items-center text-center">
             <span className="mb-3 text-pink-500">
@@ -161,8 +159,8 @@ const About = () => (
                 <circle cx="12" cy="12" r="10" />
               </svg>
             </span>
-            <h4 className="font-bold text-black">Pay-Per-Click</h4>
-            <p className="text-white-600 text-sm mt-1">Drive targeted traffic</p>
+            <h4 className="font-bold text-black">Pay-Per-Click Expertise</h4>
+            <p className="text-pink-600 font-bold text-sm mt-1">Drive targeted traffic</p>
           </div>
         </div>
       </div>

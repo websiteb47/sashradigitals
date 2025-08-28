@@ -60,7 +60,7 @@ const Home = () => {
       <Toaster position="top-center" reverseOrder={false} />
 
       {/* 🎯 Content Highlighter Section */}
-      <section className="relative pt-20 md:pt-20 mb-10">
+      <section className="relative">
         <ContentHighlighter />
       </section>
 

@@ -48,7 +48,7 @@ const ContentHighlighter = () => {
   ];
 
   return (
-    <div className="relative w-full h-[550px] md:h-[58 0px] overflow-hidden">
+    <div className="relative w-full h-[550px] md:h-[580px] overflow-hidden">
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         loop={true}

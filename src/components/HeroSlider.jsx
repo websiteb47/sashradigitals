@@ -30,14 +30,14 @@ const HeroSlider = () => {
         }}
         slidesPerView={1}
         spaceBetween={0}
-        className="absolute inset-0 z-0 h-64 md:h-[350px] w-full"
+        className="absolute inset-0 z-0  w-full"
       >
         {slides.map((src, index) => (
           <SwiperSlide key={index}>
             <img
               src={src}
               alt={`Hero slide ${index + 1}`}
-              className="w-full h-96 md:h-[500px] object-cover"
+              className="w-full  object-cover"
               loading="lazy"
               onError={(e) => {
                 console.error(`Failed to load slide ${index + 1}:`, src);
